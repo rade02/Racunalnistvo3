@@ -1,4 +1,3 @@
-package Naloge;
 import java.util.Scanner;
 
 public class Naloga4 {
@@ -38,10 +37,10 @@ public class Naloga4 {
 			}
 		}
 		System.out.print("Stimulacija znasa " + st * 100 + " % osnovne place, kar je ");
-		System.out.format("%.2f €.\n", st*osnovnaPlaca);
+		System.out.format("%.2f â‚¬.\n", st*osnovnaPlaca);
 		
 		double placa = osnovnaPlaca*(1 + st);
-		System.out.format("Placa je %.2f €.", placa);
+		System.out.format("Placa je %.2f â‚¬.", placa);
 	}
 
 }
