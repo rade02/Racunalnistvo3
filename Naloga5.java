@@ -1,4 +1,3 @@
-package Naloge;
 import java.util.Scanner;
 
 public class Naloga5 {
@@ -27,5 +26,4 @@ public class Naloga5 {
 			default: System.out.println("Ni mesec.");
 		}
 	}
-
 }
