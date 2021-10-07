@@ -1,4 +1,3 @@
-package Naloge;
 import java.util.Scanner;
 
 public class Naloga2 {
@@ -22,13 +21,9 @@ public class Naloga2 {
 		
 		double p = (a * b)/2; //ploscina
 		
-		System.out.print("Hipotenuza je dolga ");
-		System.out.format("c = %.1f", c);
-		System.out.print(", alfa je velik ");
-		System.out.format("alfa = %.1f", alfa);	//izpis kota na eno decimalko
-		System.out.print(" stopinj, beta je velik ");
-		System.out.format("beta = %.1f", beta);	//izpis kota na eno decimalko
-		System.out.print(" stopinj, ploscina trikotnika pa je " + (int)p + ".");
+		System.out.format("Hipotenuza je dolga %.1f, ", c);
+		System.out.format("alfa je velik %.1f stopinj, beta je velik ", alfa);	//izpis kota na eno decimalko
+		System.out.format("%.1f stopinj, ploscina trikotnika pa je ", beta);	//izpis kota na eno decimalko
+		System.out.format("%.1f.", p);
 	}
-
 }
