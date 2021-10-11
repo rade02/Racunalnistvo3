@@ -13,7 +13,7 @@ public class Naloga1 {
 		int m = (int)(d / 100);
 		int dm = (int)((d % 100)/10);
 		int cm = (int)(d % 10);
-		int mm = (int)(Math.round((d % 1) * 10)); //zaokrozimo
+		int mm = (int)(Math.round((d % 1) * 10)); //zaokrožimo
 		
 		System.out.println(m + "m " + dm + "dm " + cm + "cm " + mm + "mm");
 	}
