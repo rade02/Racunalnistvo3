@@ -10,6 +10,7 @@ public class Naloga2 {
 		double a = vnos.nextDouble();
 		System.out.println("Vnesi dolzino druge katete pravokotnega trikotnika: ");
 		double b = vnos.nextDouble();
+		vnos.close();
 		
 		double c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));	//hipotenuza
 		
