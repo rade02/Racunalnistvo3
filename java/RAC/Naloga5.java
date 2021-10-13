@@ -11,10 +11,11 @@ public class Naloga5 {
 		System.out.println("Vnesi leto: ");
 		int leto = vnos.nextInt();
 		int dni = 0;
+		vnos.close();
 		
 		switch (mesec) {
-			case 1: case 3: case 5: case 7: case 8: case 10: case 12: dni = 31;break;
-			case 4: case 6: case 9: case 11: dni = 30; break;
+			case 1: case 3: case 5: case 7: case 8: case 10: case 12: dni = 31; System.out.println("Mesec ima " + dni + " dni.");break;
+			case 4: case 6: case 9: case 11: dni = 30; System.out.println("Mesec ima " + dni + " dni.");break;
 			case 2:
 				if (((leto % 4 == 0) && !(leto % 100 == 0)) || (leto % 400 == 0)) {
 					dni = 29;
