@@ -1,4 +1,3 @@
-package nalogeLAV;
 import java.util.Scanner;
 
 public class KalkulatorDvehStevil {
@@ -49,7 +48,7 @@ public class KalkulatorDvehStevil {
 			};break;
 		default: System.out.println("Napacen vnos");break;
 		}
-
+		vnos.close();
 	}
 
 }
