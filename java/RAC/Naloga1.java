@@ -7,6 +7,7 @@ public class Naloga1 {
 		
 		System.out.println("Vnesi diagonalo TV v incih: ");
 		int inch = vnos.nextInt();
+		vnos.close();
 		
 		double d = inch * 2.54;
 		
