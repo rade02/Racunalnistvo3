@@ -11,7 +11,7 @@ public class KalkulatorDvehStevil {
 		char tip = vnos.nextLine().charAt(0);
 		
 		switch (tip) {
-		case 'C':
+		case ('C' | 'c'):
 			System.out.println("Vnesi prvo celo stevilo: ");
 			int a = vnos.nextInt();
 			System.out.println("Vnesi drugo celo stevilo: ");
@@ -31,7 +31,7 @@ public class KalkulatorDvehStevil {
 			case '^': {int rezultat = a ^ b;System.out.println(rezultat);break;}
 			default: System.out.println("Napacen vnos");break;
 			};break;
-		case 'D':
+		case ('D' | 'd'):
 			System.out.println("Vnesi prvo stevilo: ");
 			double c = vnos.nextDouble();
 			System.out.println("Vnesi drugo stevilo: ");
