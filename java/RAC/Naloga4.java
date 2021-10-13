@@ -12,6 +12,7 @@ public class Naloga4 {
 		//R - realizacija, N - norma, st - stimulacija
 		System.out.println("Vnesi realizacijo norme v %: ");
 		double R = (vnos.nextDouble()) / 100;
+		vnos.close();
 		int N = 1;
 		double st = 0;
 		
