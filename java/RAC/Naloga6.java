@@ -1,4 +1,3 @@
-package Naloge;
 import java.util.Scanner;
 
 public class Naloga6 {
@@ -9,6 +8,7 @@ public class Naloga6 {
 		
 		System.out.println("Vnesi crko kategorije vozila: ");
 		char K = vnos.nextLine().charAt(0);
+		vnos.close();
 		
 		switch (K) {
 		case 'A': System.out.println("motorna kolesa");break;
