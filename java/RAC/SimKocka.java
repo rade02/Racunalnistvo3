@@ -1,5 +1,3 @@
-package Naloge;
-
 public class SimKocka {
 
 	public static void main(String[] args) {
