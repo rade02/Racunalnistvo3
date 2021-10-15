@@ -1,5 +1,3 @@
-package Naloge;
-
 public class Funkcija1 {
 
 	public static void main(String[] args) {
