@@ -1,35 +1,37 @@
-package car;
+package nalogeLAV;
 import java.util.Scanner;
 
 public class Stirimestno {
 
 	public static void main(String[] args) {
 		
-		Scanner vnos = new Scanner(System.in);
+		System.out.println("Vnesi stirimestno stevilo: ");
+		Scanner vhod = new Scanner(System.in);
 		
-		int x = vnos.nextInt();
-		int zmesano = 0;
+		int a = vhod.nextInt();
+		vhod.close();
 		
+		if ((a >= 1000) && (a <= 9999)) {
+			
+			int e = a % 10;
+			a /= 10;
 		
-		int e = x % 10;
-		e *= 1000;
-		x /= 10;
+			int d = a % 10;
+			a /= 10;
 		
-		int d = x % 10;
-		d = (d*d) % 10;
-		x /= 10;
+			int s = a % 10;
+			a /= 10;
 		
-		int s = x % 10;
-		s = (s*s) % 10;
-		s *= 10;
-		x /= 10;
+			int t = a;
 		
-		int t = x;
+			int d2 = (int)(Math.pow(d, 2) % 10);
+			int s2 = (int)(Math.pow(s, 2)% 10);
 		
-		
-		zmesano = e + d + s + t;
-		System.out.println(zmesano);
-		
+			int stirimestno = 1000 * e + 100 * s2 + 10 * d2 + t;
+			System.out.println(stirimestno);
+		}
+		else
+			System.out.println("Napacen vnos");
 		
 	}
 
