@@ -8,7 +8,6 @@ public class Zlitje {
 		System.out.println("Vnesi dve trimestni stevili: ");
 		int a = vhod.nextInt();
 		int b = vhod.nextInt();
-		vhod.close();
 		
 		if (((a >= 100) && (a <= 999) && (b >= 100) && (b <= 999))) {
 			
@@ -34,6 +33,7 @@ public class Zlitje {
 		}
 		else
 			System.out.println("Napacen vnos");
+		vhod.close();
 	}
 
 }
