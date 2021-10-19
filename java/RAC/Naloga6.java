@@ -8,7 +8,6 @@ public class Naloga6 {
 		
 		System.out.println("Vnesi crko kategorije vozila: ");
 		char K = vnos.nextLine().charAt(0);
-		vnos.close();
 		
 		switch (K) {
 		case 'A': System.out.println("motorna kolesa");break;
@@ -20,7 +19,7 @@ public class Naloga6 {
 		case 'G': System.out.println("delovni stroji in motokultivatorji");break;
 		default: System.out.println("Napacen vnos kategorije vozila.");break;
 		}
-		
+		vnos.close();
 	}
 
 }
