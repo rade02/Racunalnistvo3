@@ -9,7 +9,7 @@ public class TempFahrenheit {
 		System.out.println("Program pretvarja med stopinjami Celzija in Fahrenheita.\nVneseni podatki bodo v (C|F): ");
 		
 		char vnos = vhod.nextLine().charAt(0);
-		vhod.close();
+		
 		System.out.println("Vnesi temperaturo: ");
 		
 		switch (vnos){
@@ -25,6 +25,7 @@ public class TempFahrenheit {
 			System.out.format("%.1f stopinj Celzija.", celzij2);break;
 		default: System.out.println("Napacen vnos");
 		}
+		vhod.close();
 	}
 
 }
