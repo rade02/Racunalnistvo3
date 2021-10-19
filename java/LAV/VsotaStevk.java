@@ -7,7 +7,7 @@ public class VsotaStevk {
 		Scanner vhod = new Scanner(System.in);
 		System.out.println("Vnesi celo stirimestno stevilo: ");
 		int a = vhod.nextInt();
-		vhod.close();
+		
 		if ((a >= 1000) && (a <= 9999)) {
 			int e = a % 10;
 			a /= 10;
@@ -25,6 +25,7 @@ public class VsotaStevk {
 		}
 		else
 			System.out.println("Napacen vnos");
+		vhod.close();
 	}
 
 }
