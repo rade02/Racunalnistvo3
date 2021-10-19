@@ -8,7 +8,7 @@ public class Naloga7 {
 		
 		System.out.println("Vnesi kategorijo vozila za cestninjenje: ");
 		String K = vnos.nextLine();
-		vnos.close();
+		
 		int cena = 0;
 		
 		switch(K) {
@@ -20,6 +20,7 @@ public class Naloga7 {
 		System.out.println("Vrednost cestnine je " + cena + " €.");break;
 		default:System.out.println("Napacen vnos kategorije.");break;
 		}
+		vnos.close();
 	}
 
 }
