@@ -7,7 +7,6 @@ public class Naloga1 {
 		
 		System.out.println("Vnesi diagonalo TV v incih: ");
 		int inch = vnos.nextInt();
-		vnos.close();
 		
 		double d = inch * 2.54;
 		
@@ -17,5 +16,6 @@ public class Naloga1 {
 		int mm = (int)(Math.round((d % 1) * 10)); //zaokrožimo
 		
 		System.out.println(m + "m " + dm + "dm " + cm + "cm " + mm + "mm");
+		vnos.close();
 	}
 }
