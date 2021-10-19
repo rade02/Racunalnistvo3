@@ -1,5 +1,3 @@
-package nalogeLAV;
-
 import java.util.Scanner;
 
 public class vajaDvaDva {
@@ -7,9 +5,9 @@ public class vajaDvaDva {
 	public static void main(String[] args) {
 		
 		Scanner vhod = new Scanner(System.in);
-		System.out.println("Vnesi celo število: ");
+		System.out.println("Vnesi celo Å¡tevilo: ");
 		int x = vhod.nextInt();
-		vhod.close();
+		
 		
 		int vrstic = x;
 		String y = "*";
@@ -17,5 +15,6 @@ public class vajaDvaDva {
 		for (int i = 1; i <= vrstic; i++) {
 			System.out.println(y.repeat(x));
 		}
+		vhod.close();
 	}
 }
