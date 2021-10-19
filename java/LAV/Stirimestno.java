@@ -1,4 +1,3 @@
-package nalogeLAV;
 import java.util.Scanner;
 
 public class Stirimestno {
@@ -9,7 +8,6 @@ public class Stirimestno {
 		Scanner vhod = new Scanner(System.in);
 		
 		int a = vhod.nextInt();
-		vhod.close();
 		
 		if ((a >= 1000) && (a <= 9999)) {
 			
@@ -32,7 +30,7 @@ public class Stirimestno {
 		}
 		else
 			System.out.println("Napacen vnos");
-		
+		vhod.close();
 	}
 
 }
