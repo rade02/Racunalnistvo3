@@ -35,12 +35,12 @@ public class vajaDvaEna {
 		vhod.nextLine();
 		System.out.println("Vnesi ime: ");
 		String ime = vhod.nextLine();
-		vhod.close();
 		
 		System.out.println(ime + " je " + spol + ", rojen je leta " + 
 		letoRojstva + ", star je " + starost + ", visok " + visina + 
 		", tezek " + teza + ". Dobil je " + steviloGlasov + " glasov,"
 		+ " rezultat izbrane potence je " + rezultatPotence + ", si je izposodil: " + izposojeno + ".");
+		vhod.close();
 	}
 
 }
