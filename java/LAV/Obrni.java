@@ -1,4 +1,3 @@
-package nalogeLAV;
 import java.util.Scanner;
 
 public class Obrni {
@@ -8,7 +7,6 @@ public class Obrni {
 		Scanner vhod = new Scanner(System.in);
 		System.out.println("Vnesi stirimestno celo stevilo: ");
 		int a = vhod.nextInt();
-		vhod.close();
 		
 		if ((a >= 1000) && (a <= 9999)) {
 			int e = a % 10;
@@ -27,6 +25,7 @@ public class Obrni {
 		}
 		else
 			System.out.println("Napacen vnos");
+		vhod.close();
 	}
 
 }
