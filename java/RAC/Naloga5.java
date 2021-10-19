@@ -11,7 +11,6 @@ public class Naloga5 {
 		System.out.println("Vnesi leto: ");
 		int leto = vnos.nextInt();
 		int dni = 0;
-		vnos.close();
 		
 		switch (mesec) {
 			case 1: case 3: case 5: case 7: case 8: case 10: case 12: dni = 31; System.out.println("Mesec ima " + dni + " dni.");break;
@@ -26,5 +25,6 @@ public class Naloga5 {
 				System.out.println("Mesec ima " + dni + " dni.");break;
 			default: System.out.println("Ni mesec.");
 		}
+		vnos.close();
 	}
 }
