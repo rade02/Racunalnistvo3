@@ -14,7 +14,6 @@ public class CasPotovanja {
 		int uraPrihoda = vhod.nextInt();
 		System.out.println("Vnesi minuto prihoda: ");
 		int minutaPrihoda = vhod.nextInt();
-		vhod.close();
 		
 		int ura = uraPrihoda - uraOdhoda;
 		int minuta = minutaPrihoda - minutaOdhoda;
@@ -25,6 +24,7 @@ public class CasPotovanja {
 		}		
 				
 		System.out.println("Cas potovanja je " + ura + " ur in " + minuta + " minut.");
+		vhod.close();
 	}
 
 }
