@@ -7,7 +7,7 @@ public class Pretvorbamm {
 		Scanner vhod = new Scanner(System.in);
 		System.out.println("Vnesi dolzino v mm: ");
 		int milim = vhod.nextInt();
-		vhod.close();
+		
 		int mm = milim;
 		
 		int m = (int)(mm / 1000);
@@ -18,6 +18,7 @@ public class Pretvorbamm {
 		mm %= 10;
 		
 		System.out.println(milim + " mm je enako " + m + " m " + dm + " dm " + cm + " cm " + mm + " mm.");
+		vhod.close();
 	}
 
 }
