@@ -18,7 +18,6 @@ public class VsotaKotov {
 		int betaMinute = vhod.nextInt();
 		System.out.println("Vnesi sekunde drugega kota: ");
 		int betaSekunde = vhod.nextInt();
-		vhod.close();
 		
 		//pretvorba za napacen vnos (ko je vec kot 60 min ali sekund)
 		if (alfaSekunde > 59) {
@@ -57,6 +56,7 @@ public class VsotaKotov {
 		}
 		
 		System.out.println("Vsota kotov je " + sestevekStopinje + " stopinj, " + sestevekMinute + " minut, " + sestevekSekunde + " sekund.");
+		vhod.close();
 	}
 
 }
