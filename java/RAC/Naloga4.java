@@ -12,7 +12,7 @@ public class Naloga4 {
 		//R - realizacija, N - norma, st - stimulacija
 		System.out.println("Vnesi realizacijo norme v %: ");
 		double R = (vnos.nextDouble()) / 100;
-		vnos.close();
+		
 		int N = 1;
 		double st = 0;
 		
@@ -42,6 +42,7 @@ public class Naloga4 {
 		
 		double placa = osnovnaPlaca*(1 + st);
 		System.out.format("Placa je %.2f €.", placa);
+		vnos.close();
 	}
 
 }
