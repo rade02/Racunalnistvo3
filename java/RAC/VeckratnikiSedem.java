@@ -1,4 +1,3 @@
-package Naloge;
 import java.util.Scanner;
 
 public class VeckratnikiSedem {
