@@ -1,5 +1,3 @@
-package Naloge;
-
 public class PovpLihaSt {
 
 	public static void main(String[] args) {
