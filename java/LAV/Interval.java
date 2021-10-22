@@ -1,33 +1,28 @@
-package car;
+package nalogeLAV;
 import java.util.Scanner;
 
 public class Interval {
 
 	public static void main(String[] args) {
 		
-		Scanner vhod = new Scanner(System.in);
+		Scanner s = new Scanner(System.in);
 		
-		int a = vhod.nextInt();
-		int b = vhod.nextInt();
-		double x = vhod.nextDouble();
+		System.out.println("Vnesi prvo krajisce intervala: ");
+		int a = s.nextInt();
+		System.out.println("Vnesi drugo krajisce intervala: ");
+		int b = s.nextInt();
+		System.out.println("Vnesi realno stevilo za preverjanje: ");
+		double x = s.nextDouble();
 		
-		if (a > b){
-			if ((x <= a) && (x >= b)){
-				System.out.println("X lezi na intervalu.");
-			}
-			else {
-				System.out.println("X ne lezi na intervalu.");
-			}
-		}
-		else {
-			if ((x <= b) && (x >= a)){
-				System.out.println("X lezi na intervalu.");
-			}
-			else {
-				System.out.println("X ne lezi na intervalu.");
-			}
-		}
-		vhod.close();
-	}
+		int max = Math.max(a, b);
+		int min = Math.min(a, b);
+		
+		if ((x <= max) && (x >= min))
+			System.out.println(x + " lezi na intervalu [" + min + ", " + max + "]");
+		else
+			System.out.println(x + " ne lezi na intervalu [" + min + ", " + max + "]");
+		
+		s.close();
+	}	
 
 }

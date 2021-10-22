@@ -1,33 +1,40 @@
-package car;
+package nalogeLAV;
 import java.util.Scanner;
 
 public class Kipci {
 
 	public static void main(String[] args) {
 		
-		Scanner vhod = new Scanner(System.in);
+		Scanner s = new Scanner(System.in);
 		
-		int a = vhod.nextInt();
-		int b = vhod.nextInt();
-		int c = vhod.nextInt();
+		System.out.println("Vnesi vrednost prvega: ");
+		float a = s.nextFloat();
+		System.out.println("Vnesi vrednost drugega: ");
+		float b = s.nextFloat();
+		System.out.println("Vnesi vrednost tretjega: ");
+		float c = s.nextFloat();
 		
-		if (a > b){
-			if (b > c){
+		if ((a > b) && (a > c)) {
+			if (b > c)
 				System.out.println("Vzemi prvega in drugega.");
-			}
-			else{
+			else
 				System.out.println("Vzemi prvega in tretjega.");
-			}
 		}
-		else if (a < b){
-			if (a > c){
+		else if ((b > a) && (b > c)){
+			if (a > c)
 				System.out.println("Vzemi drugega in prvega.");
-			}
-			else{
+			else
 				System.out.println("Vzemi drugega in tretjega.");
-			}
 		}
-		vhod.close();
+		else if ((c > a) && (c > b)){
+			if (a > b)
+				System.out.println("Vzemi tretjega in prvega.");
+			else
+				System.out.println("Vzemi tretjega in drugega.");
+		}
+		else
+			System.out.println("Vzemi katerakoli.");
+		s.close();
 	}
 
 }
