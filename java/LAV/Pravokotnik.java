@@ -1,4 +1,3 @@
-package nalogeLAV;
 import java.util.Scanner;
 
 public class Pravokotnik {
