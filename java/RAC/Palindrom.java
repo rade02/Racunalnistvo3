@@ -1,4 +1,3 @@
-package Naloge;
 import java.util.Scanner;
 
 public class Palindrom {
@@ -7,7 +6,7 @@ public class Palindrom {
 		
 		Scanner s = new Scanner(System.in);
 		
-		System.out.println("Vnesi število: ");
+		System.out.println("Vnesi Å¡tevilo: ");
 		String num = s.nextLine();
 		int length = num.length();
 		char a = ' ';
