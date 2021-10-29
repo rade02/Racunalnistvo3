@@ -1,4 +1,3 @@
-package nalogeLAV;
 import java.util.Scanner;
 
 public class Datum {
@@ -8,7 +7,7 @@ public class Datum {
 		Scanner s = new Scanner(System.in);
 		System.out.println("Vnesi letnico: ");
 		int leto = s.nextInt();
-		System.out.println("Vnesi zaporedno številko dneva v letu: ");
+		System.out.println("Vnesi zaporedno Å¡tevilko dneva v letu: ");
 		int dan = s.nextInt();
 		s.close();
 		
