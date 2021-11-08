@@ -1,5 +1,3 @@
-package nalogeLAV;
-
 public class Preverjanje4 {
 
 	public static void main(String[] args) {
