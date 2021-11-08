@@ -1,5 +1,3 @@
-package Naloge;
-
 public class PitagorejskeTrojice {
 
 	public static void main(String[] args) {
