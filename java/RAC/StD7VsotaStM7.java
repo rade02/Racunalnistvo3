@@ -1,5 +1,3 @@
-package Naloge;
-
 public class StD7VsotaStM7 {
 
 	public static void main(String[] args) {
