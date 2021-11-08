@@ -1,5 +1,3 @@
-package Naloge;
-
 public class VsotaSt8 {
 
 	public static void main(String[] args) {
