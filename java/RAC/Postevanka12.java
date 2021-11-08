@@ -1,5 +1,3 @@
-package Naloge;
-
 public class Postevanka12 {
 
 	public static void main(String[] args) {
