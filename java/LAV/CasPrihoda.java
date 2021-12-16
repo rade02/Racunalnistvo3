@@ -1,32 +1,26 @@
+package preverjanje1;
 import java.util.Scanner;
 
 public class CasPrihoda {
 
 	public static void main(String[] args) {
 		
-		Scanner vhod = new Scanner(System.in);
+	    Scanner s = new Scanner(System.in);
+	    System.out.println("Vnesi uro odhoda: ");
+	    int ura = s.nextInt();
+	    System.out.println("Vnesi minuto odhoda: ");
+	    int min = s.nextInt();
+	    System.out.println("Vnesi trajanje: ");
+	    int trajanje = s.nextInt();
+	    s.close();
+	    
+	    double minute = min + trajanje;
+	    double ure = ura + minute%60;
+	    minute %= 60;
+	    
+	    System.out.println("Prispe ob: " + ((ure < 10) ? ("0" + (int)ure):(int)ure) + ":" + ((min < 10) ? ("0" + (int)minute):(int)minute));
+	    
+	    }
 		
-		System.out.println("Vnesi uro odhoda: ");
-		int uraOdhoda = vhod.nextInt();
-		System.out.println("Vnesi minuto odhoda: ");
-		int minutaOdhoda = vhod.nextInt();
-		System.out.println("Vnesi uro casa potovanja: ");
-		int uraPotovanja = vhod.nextInt();
-		System.out.println("Vnesi minuto casa potovanja: ");
-		int minutaPotovanja = vhod.nextInt();
-		
-		int uraPrihoda = uraOdhoda + uraPotovanja;
-		int minutaPrihoda = minutaOdhoda + minutaPotovanja;
-		
-		if (minutaPrihoda > 59) {
-			uraPrihoda = uraPrihoda + (minutaPrihoda / 60);
-			minutaPrihoda %= 60;
-		}
-		if (uraPrihoda > 23) {
-			uraPrihoda %= 24;
-		}
-		
-		System.out.println("Cas prihoda je ob " + uraPrihoda + " uri in " + minutaPrihoda + " minuti.");
-		vhod.close();
-	}
+
 }
