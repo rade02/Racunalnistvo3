@@ -4,9 +4,10 @@ public class Enaintrideseta {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Vnesi znesek: ");
-		Scanner s = new Scanner(System.in);
+	System.out.println("Vnesi znesek: ");
+	Scanner s = new Scanner(System.in);
         int znesek = s.nextInt();
+	s.close();
         
         int sto = 0, petdeset = 0, dvajset = 0, deset = 0;
         
