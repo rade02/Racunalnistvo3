@@ -14,9 +14,7 @@ public class SahTrdnjava{
                             System.out.print('-');
                             else if(x == tx) //navpicni doseg
                                 System.out.print("|");
-                            else if((x % 2 == 0)&&(y % 2 != 0)) //prazna bela polja
-                                System.out.print('B');
-                                else if((x % 2 != 0) && (y % 2 == 0))
+                            else if((x + y) % 2 == 0)
                                     System.out.print('B');
                                     else
                                         System.out.print('C'); //prazna crna polja
