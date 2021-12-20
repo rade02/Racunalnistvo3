@@ -1,23 +1,21 @@
-package LAVvajeZanke;
+public class Sedemnajsta{
 
-public class Sedemnajsta {
-
-	public static void main(String[] args) {
-		
-		int n = 2;
-		for(int i = 0; i < 100; i++) {
-			
-			for(int j = 2; j <= Math.sqrt(n); j++) {
-				if(n % j == 0) {
-					break;
-				}
-				else
-					System.out.println(n);
-					
-			}
-			n++;
-		}
-
-	}
-
+     public static void main(String []args){
+        
+        int stevec = 0, n = 2;
+        
+        while(stevec < 100){
+            boolean jePrastevilo = true;
+            for(int i = 2; i <= Math.sqrt(n); i++){ //ali je n prastevilo (zacnemo z 2, da se zanka lahko ujame v pogoj)
+                if(n % i == 0)
+                    jePrastevilo = false;
+            }
+            
+            if(jePrastevilo == true){ //ce je prastevilo, ga izpisemo in povecamo stevec
+                System.out.print(n + " ");
+                stevec++;
+            }
+            n++;
+        }
+     }
 }
