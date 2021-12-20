@@ -17,6 +17,6 @@ public class Sestnajsta{
             }
             
         }
-        System.out.print(1);
+        
      }
 }
