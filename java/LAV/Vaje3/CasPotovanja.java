@@ -3,9 +3,9 @@ public class CasPotovanja {
 	public static void main(String[] args) {
 		
 		int uraOdhoda = 12;
-		int minOdhoda = 30;
-	  int uraPrihoda = 18;
-	  int minPrihoda = 40;
+		int minOdhoda = 40;
+	    	int uraPrihoda = 18;
+	    	int minPrihoda = 30;
 		int razMin, razUr;
 		
 		if(minOdhoda > minPrihoda){
@@ -16,7 +16,8 @@ public class CasPotovanja {
 		    razMin = minPrihoda - minOdhoda;
 		    razUr = uraPrihoda - uraOdhoda;
 		}
-		System.out.println(razUr + " " + razMin);
+	    
+		System.out.println("Trajanje: " + razUr + "ur in " + razMin + "min");
 		 
 	}
 
