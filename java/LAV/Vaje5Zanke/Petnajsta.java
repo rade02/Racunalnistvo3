@@ -12,8 +12,10 @@ public class Petnajsta {
 		boolean jePrastevilo = true;
 		
 		for(int i = 2; i <= Math.sqrt(n); i++) {
-			if(n % i == 0)
+			if(n % i == 0){
 				jePrastevilo = false;
+				break;
+			}
 		}
 		
 		if(jePrastevilo == true)
