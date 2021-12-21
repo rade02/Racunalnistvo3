@@ -7,8 +7,10 @@ public class Sestnajsta{
         for(int i = 2; i <= n; i++){
             boolean jePrastevilo = true;
             for(int j = 2; j <= Math.sqrt(i); j++){ //ali je i prastevilo
-                if(i % j == 0)
+                if(i % j == 0){
                     jePrastevilo = false;
+                    break;
+                }
             }
             if((n % i == 0) && (jePrastevilo == true)){ //ce je i prastevilo in deli n
                 System.out.print(i + " ");
