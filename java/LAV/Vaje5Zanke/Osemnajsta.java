@@ -7,8 +7,10 @@ public class Osemnajsta{
         while(stevec <= n){ //pregledamo vsa prastevila do n-tega
             boolean jePrastevilo = true;
             for(int i = 2; i <= Math.sqrt(st); i++){ //ali je st prastevilo
-                if(st % i == 0)
+                if(st % i == 0){
                     jePrastevilo = false;
+                    break;
+                }
             }
             
             if(jePrastevilo == true){ //ce je prastevilo povecamo stevec
