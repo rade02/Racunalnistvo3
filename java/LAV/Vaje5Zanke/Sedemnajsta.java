@@ -7,8 +7,10 @@ public class Sedemnajsta{
         while(stevec < 100){
             boolean jePrastevilo = true;
             for(int i = 2; i <= Math.sqrt(n); i++){ //ali je n prastevilo (zacnemo z 2, da se zanka lahko ujame v pogoj)
-                if(n % i == 0)
+                if(n % i == 0){
                     jePrastevilo = false;
+                    break;
+                }
             }
             
             if(jePrastevilo == true){ //ce je prastevilo, ga izpisemo in povecamo stevec
