@@ -34,7 +34,7 @@ public class FunkcijaTabelaCSV {
         pw.println("x, y");
         
         //zapis podatkov v datoteko
-        double x = -2;
+        double x = spMeja;
         for(int j = 0; j < tab.length; j++){
             try {
             	pw.println(x + "," + tab[j]);
