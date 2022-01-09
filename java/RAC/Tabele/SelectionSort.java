@@ -15,7 +15,6 @@ public class SelectionSort{
         while(prviNeurejen < tab.length - 1){
             
             int min = prviNeurejen; //indeks najmanjsega stevila
-            int stPrvoNeurejeno = tab[prviNeurejen]; //prvo neurejeno stevilo
             
             //gremo cez neurejen del in najdemo indeks najmanjsega stevila
             for(int i = prviNeurejen; i < tab.length; i++){
