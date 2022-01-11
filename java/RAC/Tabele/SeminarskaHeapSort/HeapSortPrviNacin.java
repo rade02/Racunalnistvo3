@@ -23,7 +23,7 @@ public class HeapSort {
         //brisanje elementov iz kopice in max-heap
 
         //za odstranjevanje elementov
-        while(indeksKopice > 1){
+        while(indeksKopice >= 1){
 
             //za max-heap
             for(int k = indeksKopice; k > 0; k--){
