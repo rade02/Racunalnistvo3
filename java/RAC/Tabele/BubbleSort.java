@@ -4,7 +4,7 @@ public class BubbleSort{
         int tab[] = {10, 6, 7, 5, 15, 17, 12};
         boolean menjaj = true;
       
-        while(menjaj == true){ //pregledujemo tabelo dokler se izvajajo menjave
+        while(menjaj == true){ //pregledujemo tabelo dokler se izvajajo menjave (ko se enkrat ne izvede nobena menjava pri prehodu cez tabelo, koncamo s pregledovanjem)
             menjaj = false;
             for(int i = 0; i < tab.length - 1; i++){ //gremo cez tabelo
                 if(tab[i] > tab[i + 1]){  //ce je potrebno izvedemo menjavo
