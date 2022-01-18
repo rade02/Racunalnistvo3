@@ -3,7 +3,7 @@ public class BubbleSort2 {
         
         int tab[] = {10, 6, 7, 5, 15, 17, 12};
         boolean menjaj = true;
-        int neurejeni = tab.length - 1; //dodamo neurejeni del, ki je na zacetku celotna tabela
+        int neurejeni = tab.length; //dodamo neurejeni del, ki je na zacetku celotna tabela
         
         while(menjaj == true){
             menjaj = false;
