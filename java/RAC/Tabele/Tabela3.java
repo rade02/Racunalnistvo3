@@ -6,7 +6,7 @@ public class Tabela3 {
 
         for(int i = 0; i < tab.length; i++){
             for(int j = 0; j < tab.length; j++){ //tukaj lahko uporabimo tab.length brez [0], ker je tabela kvadratna
-                if((i - j) % 2 == 0)
+                if((i - j) % 2 == 0) //ali pogoj (i % 2 == j % 2)
                     tab[i][j] = 1;
                 else
                 tab[i][j] = 0;
