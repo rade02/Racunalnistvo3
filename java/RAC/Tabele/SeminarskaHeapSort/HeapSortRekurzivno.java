@@ -40,7 +40,7 @@ public class HeapSortRekurzivno
         if((leviPotomec < n) && (tab[leviPotomec] > tab[naj]))
             naj = leviPotomec;
         //ce je desni potomec vecji od najvecjega, postane najvecji desni
-        if((desniPotomec < n)&&(tab[desniPotomec] > tab[naj]))
+        if((desniPotomec < n) && (tab[desniPotomec] > tab[naj]))
             naj = desniPotomec;
         
         if(naj != i){   //ce stars ni najvecji, ga zamenjamo z najvecjim potomcem in ponovno postavimo max-heap
