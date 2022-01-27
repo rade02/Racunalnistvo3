@@ -1,8 +1,8 @@
-public class HeapSortRekurzivno
+public class HeapSortAlgoritem2
 {
     public static void main(String[] args)
     {
-        int tab[] = {15, 13, 11, 25, 30, 11, 32, 26};
+        int tab[] = {15, 20, 16, 12, 15, 18};
         sort(tab);
             
         //print urejene tabele
@@ -40,7 +40,7 @@ public class HeapSortRekurzivno
         if((leviPotomec < n) && (tab[leviPotomec] > tab[naj]))
             naj = leviPotomec;
         //ce je desni potomec vecji od najvecjega, postane najvecji desni
-        if((desniPotomec < n) && (tab[desniPotomec] > tab[naj]))
+        if((desniPotomec < n)&&(tab[desniPotomec] > tab[naj]))
             naj = desniPotomec;
         
         if(naj != i){   //ce stars ni najvecji, ga zamenjamo z najvecjim potomcem in ponovno postavimo max-heap
@@ -50,6 +50,6 @@ public class HeapSortRekurzivno
 
             heapify(tab, n, naj);
         }
-        //ko bo stars vecji od potomcev, bo to vozlisce urejeno kot max-heap in nadaljujemo z naslednjim
+        //ko bo stars vedno vecji od potomcev, bo to vozlisce urejeno kot max-heap in nadaljujemo z naslednjim
     }
 }
