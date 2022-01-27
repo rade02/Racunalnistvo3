@@ -1,4 +1,4 @@
-public class HeapSortAlgoritem2
+public class HeapSortRekurzivno
 {
     public static void main(String[] args)
     {
