@@ -1,53 +1,66 @@
-public class HeapSort {
+public class HeapSortPrviNacin {
     
     public static void main(String[] args){
 
-        int[] tab = {20, 25, 40, 10, 16, 30};
-        int kopicaZadnjiIndeks = 1;
+        int[] tab = {15, 20, 16, 12, 15, 18};
+        int kopicaIndeks = 0;
 
         //ustvarjanje kopice
-        while(kopicaZadnjiIndeks < tab.length){
-            for(int j = 0; j <= kopicaZadnjiIndeks; j++){
-                if(tab[j] > tab[((int)(j / 2))]){ //ce je otrok vecji od starsa, ju zamenjamo
-                    int tmp = tab[((int)(j / 2))];
-                    tab[((int)(j / 2))] = tab[j];
-                    tab[j] = tmp;
+        //zacnemo pri prvem indeksu in gremo do predzadnjega (zadnji element uredimo s tem, ko naredimo max-heap)
+        while(kopicaIndeks < tab.length - 1){
+            //izvedemo max-heap cez celotno do sedaj narejeno kopico
+            for(int i = 0; i < kopicaIndeks; i++){
+                int indeksStars = (int)((kopicaIndeks - 1) / 2);
+                //ugotovimo najvecjega potomca
+                int leviPotomecIndeks = 2*indeksStars + 1;
+                int desniPotomecIndeks = 2*indeksStars + 2;
+                int najPotomecIndeks = leviPotomecIndeks;
+                if(tab[leviPotomecIndeks] < tab[desniPotomecIndeks]){
+                    najPotomecIndeks = desniPotomecIndeks;
+                }
+                //menjava ce je potomec vecji
+                if(tab[najPotomecIndeks] > tab[kopicaIndeks]){
+                    int temp =  tab[kopicaIndeks];
+                    tab[kopicaIndeks] = tab[najPotomecIndeks];
+                    tab[najPotomecIndeks] = temp;
                 }
             }
-            kopicaZadnjiIndeks++;
+            kopicaIndeks++;
         }
-
-        int indeksKopice = kopicaZadnjiIndeks - 1; //ker ga na koncu se enkrat povecamo
+        
         
 
         //brisanje elementov iz kopice in max-heap
 
-        //za odstranjevanje elementov
-        while(indeksKopice >= 1){
+        //zacnem iz desne strani v tabeli
+        int indeksKopice = tab.length - 1;
 
-            //za max-heap
+        //za odstranjevanje elementov gremo do zacetka tabele
+        while(indeksKopice > 0){
+
+            //za max-heap pregledamo celotno kopico
             for(int k = indeksKopice; k > 0; k--){
                 
                 int indeksStarsa = (int)((k - 1) / 2);
-                int indeksLeviOtrok = 2*indeksStarsa + 1;
-                int indeksDesniOtrok = 2*indeksStarsa + 2;
-                int indeksVecjiOtrok = indeksStarsa;
+                int indeksLeviPotomec = 2*indeksStarsa + 1;
+                int indeksDesniPotomec = 2*indeksStarsa + 2;
+                int indeksVecjiPotomec = indeksStarsa;
 
-                //kateri otrok je najvecji
-                if((indeksDesniOtrok <= indeksKopice) && (tab[indeksDesniOtrok] > tab[indeksLeviOtrok]))
-                    indeksVecjiOtrok = indeksDesniOtrok;
+                //kateri potomec je najvecji
+                if((indeksDesniPotomec <= indeksKopice) && (tab[indeksDesniPotomec] > tab[indeksLeviPotomec]))
+                    indeksVecjiPotomec = indeksDesniPotomec;
                 else
-                    indeksVecjiOtrok = indeksLeviOtrok;
+                    indeksVecjiPotomec = indeksLeviPotomec;
                 
 
-                if(tab[indeksStarsa] < tab[indeksVecjiOtrok]){ //ce je vecji otrok vecji od starsa, ju zamenjamo
+                if(tab[indeksStarsa] < tab[indeksVecjiPotomec]){ //ce je vecji otrok vecji od starsa, ju zamenjamo
                     int tmp = tab[indeksStarsa];
-                    tab[indeksStarsa] = tab[indeksVecjiOtrok];
-                    tab[indeksVecjiOtrok] = tmp;
+                    tab[indeksStarsa] = tab[indeksVecjiPotomec];
+                    tab[indeksVecjiPotomec] = tmp;
                 }
             
             }
-            
+            //element v korenu damo iz kopice v tabelo, tako bodo elementi urejeni
             int izbrisan = tab[0];
             tab[0] = tab[indeksKopice];
             tab[indeksKopice] = izbrisan;
