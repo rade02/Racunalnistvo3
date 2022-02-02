@@ -11,7 +11,8 @@ public class MetanjeKrogle {
 		nakljucnaSt(r);
 		
 		for(int n = 0; n < serije; n++){
-			System.out.println(povprecjeSerije(r, n));
+			double a = povprecjeSerije(r, n);
+			System.out.format("%.3f\n", a);
 		}
 
 	}
