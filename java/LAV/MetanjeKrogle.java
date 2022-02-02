@@ -2,6 +2,17 @@
 Na atletskem tekmovanju je v metu krogle nastopilo 12 tekmovalcev. vsak je imel na voljo šest metov. Rezultati, ki so jih dosegli v posameznih serijah, so shranjeni
 v tabeli r, ki ima 12 vrstic (vsaka vrstica ustreza enemu tekmovalcu) in 6 stolpcev (vsak stolpec ustreza eni seriji metov). Neveljavni meti so zabelezeni kot meti
 z dolzino 0. Napisite podprogram povprecjeSerije, ki za vsako serijo posebej izpiše povprecno dolzino metov. Pri tem naj uposteva samo veljavne mete (tiste z dolzino > 0).
+
+for(int i = 0; i < 6; i++){
+	int vsotaSerije = 0;
+	int veljavnihMetov = 0;
+	for(int j = 0; j < 12; j++){
+		vsotaSerije += tab[j][i];
+		if(tab[j][i] > 0)
+			veljavnihMetov++;
+	}
+	System.out.println(vsotaSerije/(double)veljavnihMetov);
+}
 */
 public class MetanjeKrogle {
 
