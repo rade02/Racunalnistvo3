@@ -10,9 +10,11 @@ public class MetanjeKrogle {
 		
 		nakljucnaSt(r);
 		
+		int serij = 1;
 		for(int n = 0; n < serije; n++){
 			double a = povprecjeSerije(r, n);
-			System.out.format("%.3f\n", a);
+			System.out.format("Povprecje " + serij + ". serije: %.3f\n", a);
+			serij++;
 		}
 
 	}
@@ -37,7 +39,10 @@ public class MetanjeKrogle {
 	}
 	
 	public static void nakljucnaSt(int[][] r){
+		int tekmoval = 1;
 		for(int i = 0; i < r.length; i++){
+			System.out.print((tekmoval < 10) ? (" " + tekmoval + ". tekmovalec: "):(tekmoval + ". tekmovalec: "));
+			tekmoval++;
 			for(int j = 0; j < r[0].length; j++){
 				r[i][j] = (int)(Math.random()*5);
 				System.out.print(r[i][j] + " ");
