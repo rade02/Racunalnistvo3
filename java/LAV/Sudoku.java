@@ -1,94 +1,74 @@
 public class Sudoku {
-    public static void main(String[] args){
+    public static void main(String[] args)
+    {
         int[][] polje = new int[9][9];
 
-        polnjenjePolja(polje);
+        polje = napolni(polje); //nakljucno generiramo stevila
 
-        izpis(polje);
-
-        System.out.println("Pravil ne krsijo vrednosti z indeksi: ");
-        for(int i = 0; i < polje.length; i++){
-            for(int j = 0; j < polje[0].length; j++){
-                boolean krsi = false;
-                
-                //za vrstice in stolpce
-                for(int k = 0; k < polje.length; k++){
-                    //za vrstico
-                    if((k != j) && (polje[i][j] == polje[i][k])){
-                        krsi = true;
-                        break;
-                    }
-                    //za stolpec
-                    else if((k != i) && (polje[i][j] == polje[k][j])){
-                        krsi = true;
-                        break;
-                    }
-                }
-
-                //za pregled kvadratov
-                //zacetek in konec kvadrata navpicno
-                /*int zi = 0;
-                int ki = 2;
-
-                if((i <= 5) && (i > 2)){
-                    zi = 3;
-                    ki = 5;
-                }
-                else if((i <= 8) && (i > 5)){
-                    zi = 6;
-                    ki = 8;
-                }
-
-                //zacetek in konec kvadrata vodoravno
-                int zj = 0;
-                int kj = 2;
-
-                if((j <= 5) && (j > 2)){
-                    zj = 3;
-                    kj = 5;
-                }
-                else if((j <= 8) && (j > 5)){
-                    zj = 6;
-                    kj = 8;
-                }
-                
-
-                int[] tab = new int[9];
-                
-                for(int k = zi; k <= ki; k++){
-                    for(int l = zj; l <= kj; l++){
-                        tab[polje[k][l]]++;
-                        if(tab[polje[k][l]] > 1){
-                            krsi = true;
-                            i = k;
-                            j = l;
-                            break;
-                        }
-                    }
-                }
-*/
-                if(!krsi)
-                    System.out.println("[" + i + "][" + j + "]");
-                
-            }
-        }
+        System.out.println("Napake v vrsticah:");
+        preveriVrstice(polje);
+        System.out.println("Napake v stolpcih:");
+        preveriStolpce(polje);
+        System.out.println("Napake v kvadratih:");
+        preveriKvadrate(polje);
         
     }
 
-    public static int[][] polnjenjePolja(int[][] polje){
-        for(int i = 0; i < polje.length; i++){
-            for(int j = 0; j < polje[0].length; j++){
-                polje[i][j] = (int)(Math.random()*9 + 1);
+    public static void preveriKvadrate(int[][] tab)
+    {
+        for(int a = 0; a < 9; a += 3){  //gremo cez vse tri navpicne kvadrate
+            for(int b = 0; b < 9; b += 3){  //gremo cez vse tri vodoravne kvadrate
+            int[] ponavljanje = new int[10];
+            for(int i = a; i <= a + 2; i++){    //gremo cez vse elemente kvadrata in zapisujemo v tabelo, kolikokrat se pojavijo
+                for(int j = b; j <= b + 2; j++)
+                    ponavljanje[tab[i][j]]++;
+            }
+            for(int i = a; i <= a + 2; i++) //gremo se enkrat cez elemente kvadrata in izpisemo indekse, na katerih so vrednosti, ki se veckrat pojavijo
+                for(int j = b; j <= b + 2; j++)
+                    if(ponavljanje[tab[i][j]] > 1)
+                        System.out.print("[" + i + "][" + j + "] ");
             }
         }
-        return polje;
+        System.out.println();
     }
 
-    public static void izpis(int polje[][]){
-        for(int i = 0; i < polje.length; i++){
-            for(int j = 0; j < polje[0].length; j++)
-                System.out.print(polje[i][j] + " ");
+    public static void preveriStolpce(int[][] tab)
+    {
+        int[] pojavnost = new int[10]; //v tabeli bomo shranjevali, kolikokrat se pojavi stevka v stolpcu
+        for(int i = 0; i < tab[0].length; i++){ //gremo cez vse stolpce
+            pojavnost = new int[10];
+            for(int j = 0; j < tab.length; j++) //gremo cez vse elemente v stolpcu in zapisujemo v tabelo, kolikokrat se pojavijo
+                pojavnost[tab[j][i]]++;
+            for(int j = 0; j < tab.length; j++) //gremo se enkrat cez elemente stolpca in izpisemo indekse, na katerih so vrednosti, ki se veckrat pojavijo
+                if(pojavnost[tab[j][i]] > 1)
+                    System.out.print("[" + j + "][" + i + "] ");
+        }
+        System.out.println();
+    }
+
+    public static void preveriVrstice(int[][] tab)
+    {
+        int[] pojavnost = new int[10];  //v tabeli bomo shranjevali, kolikokrat se pojavi stevka v vrstici
+        for(int i = 0; i < tab.length; i++){ //gremo cez vse vrstice
+            pojavnost = new int[10];
+            for(int j = 0; j < tab[0].length; j++) //gremo cez vse elemente v vrstici in zapisujemo v tabelo, kolikokrat se pojavijo
+                pojavnost[tab[i][j]]++;
+            for(int j = 0; j < tab[0].length; j++) //gremo se enkrat cez elemente vrstice in izpisemo indekse, na katerih so vrednosti, ki se veckrat pojavijo
+                if(pojavnost[tab[i][j]] > 1)
+                    System.out.print("[" + i + "][" + j + "] ");
+        }
+        System.out.println();
+    }
+
+    public static int[][] napolni(int[][] tab)
+    {
+        for(int i = 0; i < tab.length; i++){
+            for(int j = 0; j < tab[0].length; j++){
+                tab[i][j] = (int)(Math.random()*9 + 1); //napolnimo s stevili od 1 do 9
+                System.out.print(tab[i][j] + " ");
+            }
             System.out.println();
         }
+        return tab;
     }
 }
