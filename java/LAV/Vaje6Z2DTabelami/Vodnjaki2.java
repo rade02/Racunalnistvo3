@@ -10,7 +10,7 @@ public class Vodnjaki2 {
             int b = (int)(Math.random()*48 + 1);
             obmocje[a][b] = 1;
             koordVodnjakov[i][0] = a;
-            koordVodnjakov[i][0] = b;
+            koordVodnjakov[i][1] = b;
         }
         
         izpisi(obmocje);
@@ -37,7 +37,7 @@ public class Vodnjaki2 {
                 double min = 48; //najmanjsa razdalja
                 int vodnjak = 0;
                 for(int k = 0; k < povrsineVodnjakov.length; k++){
-                    double razdalja = Math.sqrt(Math.pow(koordVodnjakov[k][0] - i, 2) + Math.pow(koordVodnjakov[k][1] - j, 2));
+                    double razdalja = Math.sqrt(Math.pow(koordVodnjakov[k][0] - i, 2) + Math.pow(koordVodnjakov[k][1] - j, 2)); //odsteti moramo i in j, da dobimo dejansko razliko mde koordinatami vodnjaka in tocke
                     if(razdalja < min){
                         min = razdalja;
                         vodnjak = k;
