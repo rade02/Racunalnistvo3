@@ -1,0 +1,69 @@
+.nav{
+    background-color:rgb(155, 44, 11);
+    height:1cm;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    width:100%;
+}
+.osnovni{
+    background-color:rgb(202, 202, 233);
+    width:100%;
+    height:fit-content;
+    margin-top:5px;
+}
+.oranznaPisava{
+    color:coral;
+}
+
+#belaPisava{
+    color:white;
+}
+#belaPisava:link{
+    text-decoration:none;
+}
+.navSpan{
+    height:100%;
+    width:fit-content;
+    display: table-cell;
+}
+.navSpan:hover{
+    background-color:maroon;
+}
+#slikaSole{
+    height:4cm;
+    width:100%;
+}
+.orgEnoteUpor{
+    width:fit-content;
+    background-color: rgb(255, 255, 255);
+}
+.oeu{
+    width:100%;
+    height:1cm;
+    background-color:rgb(155, 44, 11);
+    color:white;
+    font-weight: bolder;
+    text-align:center;
+    vertical-align: middle;
+    
+}
+.sole{
+    height:0.6cm;
+    width:100%;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:5px;
+    
+}
+#sss:hover{
+    background-color: blue;
+}
+#sestg:hover{
+    background-color: green;
+}
+li{
+    font-style:italic;
+    font-weight:bolder;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
