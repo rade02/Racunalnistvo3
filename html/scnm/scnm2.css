@@ -1,9 +1,15 @@
+div{
+    border:1px solid;
+    border-color: black;
+}
 .nav{
     background-color:rgb(155, 44, 11);
     height:1cm;
     text-align: center;
     vertical-align: middle;
-    display: table-cell;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
     width:100%;
 }
 .osnovni{
@@ -11,6 +17,7 @@
     width:100%;
     height:fit-content;
     margin-top:5px;
+    margin-bottom:1cm;
 }
 .oranznaPisava{
     color:coral;
@@ -25,45 +32,109 @@
 .navSpan{
     height:100%;
     width:fit-content;
-    display: table-cell;
+    /*display: table-cell;*/
 }
 .navSpan:hover{
     background-color:maroon;
 }
+
 #slikaSole{
     height:4cm;
     width:100%;
 }
+
+#OrgUporab{
+    padding:0.5cm;
+    background-color:white;
+    width:max-content;
+}
 .orgEnoteUpor{
-    width:fit-content;
-    background-color: rgb(255, 255, 255);
+    width:100%;
+    margin-bottom:1cm;
 }
 .oeu{
-    width:100%;
+    width:auto;
     height:1cm;
     background-color:rgb(155, 44, 11);
     color:white;
     font-weight: bolder;
     text-align:center;
     vertical-align: middle;
-    
+    padding-top:18px;
 }
 .sole{
-    height:0.6cm;
-    width:100%;
+    height:0.8cm;
+    width:auto;
     padding-left:5px;
     padding-right:5px;
     padding-top:5px;
-    
+    text-align:left;
+    vertical-align: middle;
 }
+
 #sss:hover{
-    background-color: blue;
+    background-color: rgb(138, 138, 243);
 }
 #sestg:hover{
-    background-color: green;
+    background-color: rgb(16, 173, 16);
 }
-li{
-    font-style:italic;
-    font-weight:bolder;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#szks:hover{
+    background-color:fuchsia;
+}
+#sglvs:hover{
+    background-color:rgb(197, 140, 34);
+}
+#eio:hover{
+    background-color:rgb(255, 238, 0);
+}
+#vss:hover{
+    background-color:rgb(70, 150, 224);
+}
+#mic:hover{
+    background-color:rgb(131, 85, 216);
+}
+
+.logotipi{
+    width:100%;
+}
+
+#vizija{
+    width:100%;
+    height:max-content;
+}
+#siv{
+    width:100%;
+    background-color:rgb(170, 170, 169);
+    height:1cm;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+}
+h5{
+    color:maroon;
+    padding-left:30%;
+}
+#besedilo{
+    padding-left:30%;
+}
+
+#spodnjaVrstica{
+    background-color:maroon;
+    height:1.5cm;
+    width:100%;
+    vertical-align: middle;
+    display: flex;
+    justify-content:space-around;
+}
+#znotraj{
+    color:white;
+    display:flex;
+    vertical-align: middle;
+    width:90%;
+    background-color:rgb(0, 49, 49);
+}
+
+#linki{
+    
+
 }
