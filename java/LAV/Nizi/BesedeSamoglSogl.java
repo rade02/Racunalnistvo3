@@ -4,7 +4,7 @@ public class BesedeSamoglSogl {
         String besedilo = "Besedilo je po slovarju slovenskega knjižnega jezika z določenimi besedami izražena misel, vendar vsako besedno sporočilo še ni besedilo. Mednje prištevamo le tista sporočila, ki imajo prepoznavno temo in namen, so sovisna in vsebinsko ter oblikovno zaokrožena.";
 
         int stBesed = 1;
-        char[] samoglasniki = {'a', 'e', 'i', 'o', 'u'};
+        String samoglasniki = "aeiouAEIOU";
         int stSamoglasnikov = 0;
         int stSoglasnikov = 0;
         int stLocil = 0;
@@ -21,9 +21,9 @@ public class BesedeSamoglSogl {
             if(Character.isLetter(besedilo.charAt(i)))
             {
                 boolean jeSamoglasnik = false;
-                for(int j = 0; j < samoglasniki.length; j++)    
+                for(int j = 0; j < samoglasniki.length(); j++)
                 {
-                    if(besedilo.charAt(i) == samoglasniki[j])
+                    if(besedilo.charAt(i) == samoglasniki.charAt(j))
                     {
                         jeSamoglasnik = true;
                         stSamoglasnikov++;
@@ -36,6 +36,7 @@ public class BesedeSamoglSogl {
             {
                 if(!Character.isDigit(besedilo.charAt(i)) && !Character.isWhitespace(besedilo.charAt(i)))
                     stLocil++;
+                
                 /*try     //poskusimo ce je stevilo (ce ga lahko brez napake parsamo v integer)
                 {
                     Integer.parseInt(Character.toString(besedilo.charAt(i)));
