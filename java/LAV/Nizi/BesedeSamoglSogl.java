@@ -34,14 +34,16 @@ public class BesedeSamoglSogl {
             }
             else    //ce ni crka, je lahko stevilo ali presledek ali locilo
             {
-                try     //poskusimo ce je stevilo (ce ga lahko brez napake parsamo v integer)
+                if(!Character.isDigit(besedilo.charAt(i)) && !Character.isWhitespace(besedilo.charAt(i)))
+                    stLocil++;
+                /*try     //poskusimo ce je stevilo (ce ga lahko brez napake parsamo v integer)
                 {
                     Integer.parseInt(Character.toString(besedilo.charAt(i)));
                 } catch (NumberFormatException e)   
                     {   //ce pride do napake in znak ni presledek, je locilo
                         if(!(Character.isWhitespace(besedilo.charAt(i))))
                             stLocil++;
-                    }
+                    }*/
             }
             stZnakovSPresledki++;
         }
