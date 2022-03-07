@@ -1,9 +1,9 @@
 /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/,
  http://www.barelyfitz.com/screencast/html-training/css/positioning/*/
-div{
+/*div{
     border:1px solid;
     border-color: black;
-}
+}*/
 #stran{
     display: block;
     width:80%;
@@ -53,6 +53,7 @@ div{
 
 #osnovnoOkno{
     background-color: rgb(232, 238, 238);
+    display:flex;
 }
 #OrgUporab{
     padding:0.5cm;
@@ -109,23 +110,36 @@ div{
 #glavnaVsebina{
     float:left;
     background-color: darkgoldenrod;
-    
+    width:100%;
 }
 #naslov{
     width:100%;
 }
+#vsebina{
+    display:flex;
+}
 .np{
     float:left;
-    
-}
-#napovednik{
-    background-color: crimson;
     width:50%;
+    background-color: greenyellow;
 }
-#pomembno{
-    background-color: cyan;
-    width:50%;
-
+.nappom{
+    width:90%;
+    background-color:rgb(148, 77, 155);
+    padding:auto;
+}
+.novice{
+    width:85%;
+    margin:auto;
+    padding:5%;
+    background-color:antiquewhite;
+}
+.vsebinaNovice{
+    background-color:rgb(214, 30, 30);
+    width:100%;
+}
+a.oranzen{
+    color:orange;
 }
 
 .logotipi{
