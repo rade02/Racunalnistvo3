@@ -1,226 +1,208 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="scnm2.css">
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <div id="stran">
-            <div class="osnovni">
-                <img src="https://www.sc-nm.si/template/images/logo.png">
-                <span class="oranznaPisava">“Soustvarjamo šolo učenja za življenje”</span>
-            </div>
-            <div class="nav" class="osnovni">
-                
-                    <span class="navSpan"><a href="https://www.sc-nm.si/domov" id="belaPisava" style="padding: 5px;">DOMOV</a></span>
-                    <span class="navSpan"><a href="https://www.sc-nm.si/informacije" id="belaPisava" style="padding: 5px;">INFORMACIJE</a></span>
-                    <span class="navSpan"><a href="https://www.sc-nm.si/projekti" id="belaPisava" style="padding: 5px;">PROJEKTI</a></span>
-                    <span class="navSpan"><a href="https://www.sc-nm.si/izobrazevanje" id="belaPisava" style="padding: 5px;">IZOBRAŽEVANJE</a></span>
-                    <span class="navSpan"><a href="https://www.sc-nm.si/razpisi" id="belaPisava" style="padding: 5px;">RAZPISI</a></span>
-                    <span class="navSpan"><a href="https://www.sc-nm.si/intranet" id="belaPisava" style="padding: 5px;">INTRANET</a></span>
-                    <span class="navSpan"><a href="https://www.sc-nm.si/obrazci" id="belaPisava" style="padding: 5px;">OBRAZCI</a></span>
-                    <span class="navSpan"><a href="https://tv.sc-nm.si/" id="belaPisava" style="padding: 5px;">ŠCNM TV</a></span>
-                
-            </div>
-            <div class="osnovni" id="slikaSole">
-                <img src="https://www.sc-nm.si/image/original/262/sc.jpg" width="100%" height="100%">
-            </div>
-            <div id="osnovnoOkno">
+/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/,
+ http://www.barelyfitz.com/screencast/html-training/css/positioning/*/
+/*div{
+    border:1px solid;
+    border-color: black;
+}*/
+#stran{
+    display: block;
+    width:80%;
+    margin:auto;
+}
+.nav{
+    background-color:rgb(155, 44, 11);
+    height:1cm;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    width:100%;
+}
+.osnovni{
+    background-color:rgb(202, 202, 233);
+    width:100%;
+    height:fit-content;
+    margin-top:5px;
+    margin-bottom:1cm;
+}
 
+.oranznaPisava{
+    color:coral;
+}
 
-                <div id="OrgUporab">
-                    <div class="orgEnoteUpor">
+#belaPisava{
+    color:white;
+}
+#belaPisava:link{
+    text-decoration:none;
+}
+.navSpan{
+    height:100%;
+    width:fit-content;
+    /*display: table-cell;*/
+}
+.navSpan:hover{
+    background-color:maroon;
+}
 
-                            <div class="oeu">ORGANIZACIJSKE ENOTE</div>
-                            <div class="sole" id="sss"><a href="https://www.sc-nm.si/sss">Srednja strojna šola</a></div>
-                            <div class="sole" id="sestg"><a href="https://www.sc-nm.si/sestg">Srednja elektro šola in tehniška gimnazija</a></div>
-                            <div class="sole" id="szks"><a href="https://www.sc-nm.si/szks">Srednja zdravstvena in kemijska šola</a></div>
-                            <div class="sole" id="sglvs"><a href="https://www.sc-nm.si/sglvs">Srednja gradbena, lesarska in vzgojiteljska šola</a></div>
-                            <div class="sole" id="eio"><a href="https://www.sc-nm.si/eio">Enota za izobraževanje odraslih</a></div>
-                            <div class="sole" id="vss"><a href="https://www.sc-nm.si/vss">Višja strokovna šola</a></div>
-                            <div class="sole" id="mic"><a href="https://www.sc-nm.si/mic">Medpodjetniški izobraževalni center</a></div>
-                    </div>
+#slikaSole{
+    height:4cm;
+    width:100%;
+}
 
-                    <div class="orgEnoteUpor">
+#osnovnoOkno{
+    background-color: rgb(232, 238, 238);
+    display:flex;
+}
+#OrgUporab{
+    padding:0.5cm;
+    float:left;
+    background-color:white;
+    width:max-content;
+}
 
-                        <div class="oeu">UPORABNO</div>
-                        <div class="sole"><a href="https://www.sc-nm.si/intranet">Intranet</a></div>
-                        <div class="sole"><a href="https://www.sc-nm.si/knjiznica">Knjižnica</a></div>
-                        <div class="sole"><a href="https://www.sc-nm.si/vsebine/prehrana">Prehrana</a></div>
-                        <div class="sole"><a href="https://www.sc-nm.si/big-band">Big Band ŠCNM</a></div>
-                        <div class="sole"><a href="https://www.sc-nm.si/sportna-dvorana">Športna dvorana Leona Štuklja</a></div>
-                        <div class="sole"><a href="https://www.sc-nm.si/obrazci">Obrazci</a></div>
-                        <div class="sole"><a href="https://www.sc-nm.si/kakovost">Kakovost</a></div>
-                        <div class="sole"><a href="https://www.sc-nm.si/povezave">Povezave</a></div>
-                    </div>
+.orgEnoteUpor{
+    width:100%;
+    margin-bottom:1cm;
+}
+.oeu{
+    width:auto;
+    height:1cm;
+    background-color:rgb(155, 44, 11);
+    color:white;
+    font-weight: bolder;
+    text-align:center;
+    vertical-align: middle;
+    padding-top:18px;
+}
+.sole{
+    height:0.8cm;
+    width:auto;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:5px;
+    text-align:left;
+    vertical-align: middle;
+}
 
-                    <div id="scidrom">
-                        <div class="logotipi"><a href="https://1ka.arnes.si/a/23555"><img src="https://www.sc-nm.si/image/original/259/Barometer.png"></a></div>
-                        <div class="logotipi"><a href="https://www.sc-nm.si/vsebine/eduroam"><img src="https://www.sc-nm.si/image/original/261/euduroam.jpg"></a></div>
-                        <div class="logotipi"><a href="https://tv.sc-nm.si/"><img src="https://www.sc-nm.si/image/original/663/tv.sc-nm.si-z-napisom350.jpg"></a></div>
-                        <div class="logotipi"><a href="https://scidrom.sc-nm.si/"><img src="https://www.sc-nm.si/image/original/664/SCiDROM_logo.jpg"></a></div>
-                    </div>
+#sss:hover{
+    background-color: rgb(138, 138, 243);
+}
+#sestg:hover{
+    background-color: rgb(16, 173, 16);
+}
+#szks:hover{
+    background-color:fuchsia;
+}
+#sglvs:hover{
+    background-color:rgb(197, 140, 34);
+}
+#eio:hover{
+    background-color:rgb(255, 238, 0);
+}
+#vss:hover{
+    background-color:rgb(70, 150, 224);
+}
+#mic:hover{
+    background-color:rgb(131, 85, 216);
+}
 
-                </div>
+hr{
+    background-color: grey;
+    width:100%;
+    height:0.5px;
+}
+#glavnaVsebina{
+    float:left;
+    /*background-color: rgb(27, 186, 197);*/
+    width:100%;
+}
+#naslov{
+    width:100%;
+}
+#vsebina{
+    display:flex;
+}
+.np{
+    float:left;
+    width:50%;
+    /*background-color: rgb(70, 104, 126);*/
+}
+.nappom{
+    width:90%;
+    padding-left:5%;
+    padding-top:1%;
+    padding-bottom:1%;
+}
+.novice{
+    width:85%;
+    margin:auto;
+    padding:5%;
+    /*background-color:antiquewhite;*/
+}
+.vsebinaNovice{
+    /*background-color:rgb(214, 30, 30);*/
+    width:100%;
+}
+a.oranzen{
+    color:orange;
+}
+#video{
+    text-align: center;
+}
 
-                <div id="glavnaVsebina">
+.logotipi{
+    width:100%;
+}
 
-                    <div id="naslov">
-                        <h1>Šolski center Novo mesto - šola učenja za življenje</h1>
-                    </div>
+#vizija{
+    width:100%;
+    height:max-content;
+    clear:both;
+}
+#siv{
+    width:100%;
+    background-color:rgb(170, 170, 169);
+    height:1cm;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+}
+h5{
+    color:maroon;
+    padding-left:30%;
+}
+#besedilo{
+    padding-left:30%;
+}
 
-                    <div id="vsebina">
-                        <div class="np">
-                            <div class="nappom">NAPOVENDIK</div>
+#spodnjaVrstica{
+    background-color:maroon;
+    height:1.5cm;
+    width:100%;
+    vertical-align: middle;
+    display: flex;
+    justify-content:space-around;
+}
+#znotraj{
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    vertical-align: middle;
+    width:90%;
+    background-color:rgb(0, 49, 49);
+}
 
-                            <div class="novice">
-                                <hr>
-                                <div class="vsebinaNovice">24. februar 2022</div>
-                                <div class="vsebinaNovice"><a class="oranzen" href="https://www.sc-nm.si/napovednik/v-casu-zimskih-pocitnic-sola-zaprta_2">V času zimskih počitnic šola zaprta</a></div>
-                                <div class="vsebinaNovice">Spoštovani, obveščamo vas, da bo, v času od 28. februarja do 4. marca 2022, šola zaprta, razen za dejavnosti...</div>
-                            </div>
+#linki{
+    vertical-align: middle;
 
-                            <div class="novice">
-                                <hr>
-                                <div class="vsebinaNovice">9. februar 2022</div>
-                                <div class="vsebinaNovice"><a class="oranzen" href="https://www.sc-nm.si/sestg/novice/sestg-prestizno-priznanje-olimpijskega-komiteja-slovenije">SEŠTG prejela prestižno priznanje OKS</a></div>
-                                <div class="vsebinaNovice">Olimpijski komite Slovenije je posebno priznanje za razvit pristop k spodbujanju dvojne kariere in zagotavljanju Športnikom prijaznega izobraževanja na srednješolski ravni podelil naši šoli.</div>
-                            </div>
-
-                            <div class="novice">
-                                <hr>
-                                <div class="vsebinaNovice">4. februar 2022</div>
-                                <div class="vsebinaNovice"><a class="oranzen" href="https://www.sc-nm.si/napovednik/novi-prostori-mica-ze-v-uporabi">Novi prostori MIC-a že v uporabi</a></div>
-                                <div class="vsebinaNovice">Leto 2022 se bo vpisalo v zgodovino Šolskega centra, saj smo v januarju že pričeli z izvajanjem izobraževalnega dela v novih prostorih prizidka...</div>
-                            </div>
-
-                            <div class="novice">
-                                <hr>
-                                <div class="vsebinaNovice">27. januar 2022</div>
-                                <div class="vsebinaNovice"><a class="oranzen" href="https://www.sc-nm.si/napovednik/7-februarja-2022-bo-sola-zaprta">7. februarja 2022 bo šola zaprta</a></div>
-                                <div class="vsebinaNovice">Spoštovani, obveščamo vas, da bo 7. februarja šola zaprta. Za nujne zadeve...</div>
-                            </div>
-
-                            <div class="novice">
-                                <hr>
-                                <div class="vsebinaNovice">27. januar 2022</div>
-                                <div class="vsebinaNovice"><a class="oranzen" href="https://www.sc-nm.si/napovednik/vabilo-na-virtualni-informativni-dan-solskega-centra-novo-me_3">Vabilo na virtualni informativni dan Šolskega centra Novo mesto</a></div>
-                                <div class="vsebinaNovice">Virtualni informativni dan bo potekal v petek, 11. februarja 2022, ob 9. in 15. uri in v soboto, 12. februarja 2022, ob 9. uri...</div>
-                            </div>
-
-                            <div class="novice">
-                                <hr>
-                                <div class="vsebinaNovice">19. januar 2022</div>
-                                <div class="vsebinaNovice"><a class="oranzen" href="https://www.sc-nm.si/sestg/novice/mednarodno-srecanje-partnerjev-projekta-ai4vet">Mednarodno srečanje partnerjev projekta AI4VET</a></div>
-                                <div class="vsebinaNovice">Na Šolskem centru Novo mesto gostimo partnerje v Erasmus+ projektu AI4VET.</div>
-                            </div>
-
-                            <div class="novice">
-                                <hr>
-                                <div class="vsebinaNovice" style="text-align: right"><a href="https://www.sc-nm.si/napovednik" style="color: orangered">Ostale novice</a></div>
-                            </div>s
-
-                        </div>
-
-                        <div class="np">
-
-                            <div class="nappom">POMEMBNO</div>
-
-                            <div class="novice">
-                                <hr>
-                                <div class="vsebinaNovice">4. februar 2022</div>
-                                <div class="vsebinaNovice"><a class="oranzen" href="https://id.sc-nm.si/">Vabilo na virtualni informativni dan Šolskega centra Novo mesto</a></div>
-                                <div class="vsebinaNovice">Virtualni informativni dan bo potekal v petek, 11. februarja 2022, ob 9. in 15. uri in v soboto, 12. februarja 2022, ob 9. uri.<br>Vljudno vabljeni.</div>
-                            </div>
-
-                            <div class="novice">
-                                <hr>
-                                <div class="vsebinaNovice">20. februar 2022</div>
-                                <div class="vsebinaNovice"><a class="oranzen" href="https://www.sc-nm.si/si/file/download/2035_bcb681a3071/Higienska%20pravila%20za%20omejevanje%20%C5%A1irjenja%20bolezni%20Covid-19.pdf">Covid-19</a></div>
-                                <div class="vsebinaNovice">Higienska pravila za omejevanje širjenja bolezni Covid-19.pdf</div>
-                            </div>
-
-                            <div class="novice">
-                                <hr>
-                                <div class="vsebinaNovice">2. september 2021</div>
-                                <div class="vsebinaNovice"><a class="oranzen" href="https://www.sc-nm.si/napovednik/nagovor-direktorja_3">Nagovor direktorja</a></div>
-                                <div class="vsebinaNovice">Spoštovani dijakinje in dijaki, spoštovani študentke in študenti!</div>
-                            </div>
-
-                            <div class="novice">
-                                <hr>
-                                <div class="vsebinaNovice">13. februar 2020</div>
-                                <div class="vsebinaNovice"><span style color="orange">Oddaja z naslovom CENTER DOGAJANJA</span></div>
-                                <div class="vsebinaNovice" id="video"><iframe width="346" height="200" src="https://www.youtube.com/embed/hnhfcBuIz5k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                            </div>
-
-                            <div class="novice">
-                                <hr>
-                                <h5>PODATKI O ŠOLI</h5>
-                                <hr>
-                                <div class="vsebinaNovice">
-                                    <p>Ustanovitelj: Republika Slovenija, Ministrstvo za šolstvo in šport<br>Naziv: Šolski center Novo mesto<br>Ulica: Šegova ulica 112<br>Kraj: 8000 Novo mesto</p>
-                                    <p>Telefon: (07) 39 32 100</p>
-                                    <p>Splet: <a href="http://www.sc-nm.si">http://www.sc-nm.si</a></p>
-                                    <p>Direktor: dr. Matej Forjan - tel: (07) 39 32 120<br>Poslovna sekretarka: Vesna Štrucelj - tel: (07) 39 32 122</p>
-                                    <p>E.pošta: <a href="mailto: info@sc-nm.si">info@sc-nm.si</a></p>
-                                    <p>Podračun: 01100-6030703433<br>ID za DDV: SI68565127</p>
-                                    <!--<p><script src="https://maps.googleapis.com/maps/api/js?client=google-maps-embed&amp;paint_origin=&amp;libraries=geometry,search&amp;v=3.exp&amp;language=sl_SI&amp;region=si&amp;callback=onApiLoad" nonce="AeH2mgCuxV0iAv/vlYmRjQ==" async defer></script></p>-->
-                                    <div id="video"><iframe width="346" height="200" src="https://www.youtube.com/embed/qS9_5ScuWm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-
-
-
-            <div class="osnovni" id="vizija">
-                <div id="siv">Vizija Šolskega centra Novo mesto</div>
-                <h5>Soustvarjamo šolo učenja za življenje...</h5>
-                <p id="besedilo">Z zavestjo, da je poleg znanja pomembno mladim ponuditi tudi okolje, 
-                    v katerem se bodo dobro počutili in v katerem bodo suvereno in samostojno
-                    gradili svoje osebnosti, znali prepoznati svoje želje in si zadati cilje, 
-                    soustvarjamo šolo, ki je prepoznavna ne le po kvalitetnem podajanju znanja, 
-                    ampak po posluhu za mlade, ki se pri nas izobražujejo za različne poklice. 
-                    Prizadevamo si postati šola, ki jo odlikuje duh sodelovanja med učitelji in 
-                    mladimi, saj se zavedamo, da le-tako lahko ustvarimo šolo učenja za 
-                    življenje.</p>
-            </div>
-
-            <div id="spodnjaVrstica">
-                <div id="znotraj">
-                    <div id="linki">
-                        <img src="https://www.sc-nm.si/template/images/logo_footer.png">
-                        <a href="https://www.sc-nm.si/rss/novice">RSS</a>
-                        <a href="https://www.sc-nm.si/domov">Domov</a>
-                        <a href="https://www.sc-nm.si/napovednik">Napovednik</a>
-                        <a href="https://www.sc-nm.si/zemljevid-strani">Zemljevid strani</a>
-                    </div>
-                    <span id="cpr"><small>Copyright © Šolski center Novo mesto 2022, Vse pravice pridržane</small></span>
-                </div>
-            </div>
-        </div>
-    </body>
-
-
-</html>
+}
+/*#cpr{
+    width:70%;
+    text-align: right;
+    vertical-align: middle;
+    padding-right:2%;
+    background-color: blueviolet;
+}
