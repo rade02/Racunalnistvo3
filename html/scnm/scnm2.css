@@ -8,6 +8,8 @@
     display: block;
     width:65%;
     margin:auto;
+    font-family:Helvetica, Arial, sans-serif;
+    font-size: small;
 }
 .nav{
     background-color:rgb(155, 44, 11);
@@ -152,6 +154,16 @@ a.oranzen{
     text-align:center;
     vertical-align: middle;
     overflow:auto;
+}
+.mapouter{
+    margin-bottom:10%;
+}
+.gmap_canvas{
+    margin:auto;
+    overflow:hidden;
+    background:none!important;
+    height: 300px;
+    width:300px;
 }
 
 .logotipi{
