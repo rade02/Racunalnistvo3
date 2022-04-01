@@ -10,6 +10,10 @@
     margin:auto;
     font-family:Helvetica, Arial, sans-serif;
     font-size: small;
+    background-color: #f5f4f4;
+}
+#zgornji{
+    background-color: white;
 }
 .nav{
     background-color:rgb(155, 44, 11);
@@ -21,7 +25,6 @@
     width:100%;
 }
 .osnovni{
-    background-color:rgb(239, 239, 255);
     width:100%;
     height:fit-content;
     margin-top:5px;
@@ -86,7 +89,7 @@
 }
 
 #osnovnoOkno{
-    background-color: rgb(232, 238, 238);
+    background-color: rgba(243, 243, 241, 0.315);
     display:flex;
 }
 #OrgUporab{
@@ -94,6 +97,7 @@
     float:left;
     background-color:white;
     width:max-content;
+    height:min-content;
 }
 
 .orgEnoteUpor{
@@ -144,6 +148,7 @@
 }
 #mic:hover{
     background-color:rgb(131, 85, 216);
+    
 }
 #glavnaVsebina{
     float:left;
@@ -164,15 +169,17 @@
 }
 .nappom{
     width:90%;
-    padding-left:10%;
+    padding-left:5%;
     /*background-color:rgb(148, 77, 155);*/
     padding:auto;
+    font-size:larger;
+    font-weight:bolder;
 }
 .novice{
     width:85%;
     margin:auto;
     padding:5%;
-    background-color:rgb(255, 248, 240);
+    background-color:rgb(255, 254, 254);
 }
 .vsebinaNovice{
     /*background-color:rgb(214, 30, 30);*/
@@ -192,6 +199,7 @@ a.oranzen{
     color:orange;
 }
 .video{
+    margin-top:5%;
     text-align:center;
     vertical-align: middle;
     overflow:auto;
@@ -228,7 +236,7 @@ a.oranzen{
 }
 h5{
     color:maroon;
-    padding-left:10%;
+    padding-left:5%;
 }
 #besedilo{
     padding-left:30%;
@@ -257,12 +265,10 @@ h5{
     align-items:center;
 }
 #cpr{
-    
 }
 
 #linki{
     vertical-align: middle;
-
 }
 /*#cpr{
     width:70%;
