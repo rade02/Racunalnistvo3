@@ -11,18 +11,23 @@
     font-family:Helvetica, Arial, sans-serif;
     font-size: small;
     background-color: #f5f4f4;
+    min-width: 22.8cm;
 }
 #zgornji{
     background-color: white;
 }
-.nav{
-    background-color:rgb(155, 44, 11);
+
+
+#nav{
+    background-color:rgb(207, 79, 40);
     height:1cm;
-    text-align: center;
+    position: relative;
+    display: inline-block;
+    /*text-align: center;
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
     align-items:center;
-    width:100%;
+    width:100%;*/
 }
 .osnovni{
     width:100%;
@@ -30,6 +35,86 @@
     margin-top:5px;
     margin-bottom:1cm;
 }
+#menu, #menu ul{
+    padding:0;  /*da ni zamika na zacetku*/
+    list-style:none;    /*da odstranimo oznake pri seznamu*/
+}
+#menu{  /*cez celoten .nav*/
+    width:100%;
+    height:100%;
+    border-radius:2px;
+}
+#menu li{
+    float:left;    /*seznam zacnemo z leve*/
+    position:relative;  /*da lahko elemente premikamo relativno od običjne postavitve*/
+}
+#menu a{
+    float:left; /*da se a prilega li in ul*/
+    padding: 11px 20px;   /*gor-dol , levo-desno*/
+    /*text-transform:uppercase;*/
+    text-decoration:none;
+    color:white;
+}
+#menu li:hover > a{
+    background:rgb(155, 44, 11);
+}
+#menu ul{
+    margin: 20px 0px 0px 20px;   /*kako se pokaze meni - premik od spodaj desno v zgoraj levo*/
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    top: 1cm;   /*odmik zgoraj*/
+    left:0px;   /*odmik levo*/
+    z-index: 1;
+    border-radius:2px;
+    background: rgb(207, 79, 40);
+}
+#menu li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    margin:0px;    /*kje se prikaze meni - kako stran*/
+}
+#menu ul a{
+    display:table-row;
+    white-space:nowrap;
+    float:none;
+}
+/*.navDiv{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.navDiv:hover{
+    background-color:maroon;
+}*/
+.dropbtn{
+    background-color: rgb(207, 79, 40);
+    color: white;
+    height:100%;
+    border: none;
+    float:left;
+}
+.ddcontent{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.ddcontent a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.ddcontent a:hover{background-color: #ddd;}
+.ddcontent:hover .ddcontent{display: block;}
+.ddcontent:hover .dropbtn{background-color: #3e8e41;}
+
+
 #search{
     display:flex;
     justify-content:space-between;
@@ -66,22 +151,13 @@
     text-decoration: none;
 }
 
-#belaPisava{
+.belaPisava{
     color:white;
 }
-#belaPisava:link{
+.belaPisava:link{
     text-decoration:none;
 }
-.navDiv{
-    height:100%;
-    width:100%;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-}
-.navDiv:hover{
-    background-color:maroon;
-}
+
 
 #slikaSole{
     height:4cm;
