@@ -88,25 +88,33 @@
     width:100%;
 }
 
-#osnovnoOkno{
-    background-color: rgba(243, 243, 241, 0.315);
+/* -----------------------------------------------------------------------------------*/
+#osnovnoOkno{   /*od slike do vizije*/
+    background-color: rgba(255, 255, 255, 0.315);
     display:flex;
+}
+#ozadjeOrgUpor{
+    background-color:rgb(197, 193, 193);
+    padding-top:0.4cm;
+    padding-bottom:0.7cm;
 }
 #OrgUporab{
     padding:0.1cm;
     float:left;
-    background-color:white;
     width:max-content;
     height:min-content;
 }
 
 .orgEnoteUpor{
-    width:100%;
+    width:86%;
+    margin:auto;
+    margin-top:5px;
     margin-bottom:1cm;
+    background-color:white;
 }
 .oeu{
     width:auto;
-    height:1cm;
+    height:0.8cm;
     background-color:rgb(155, 44, 11);
     color:white;
     font-weight: bolder;
@@ -122,32 +130,43 @@
     width:auto;
     text-align:left;
     vertical-align: middle;
+    padding:2px;
 }
 .soleLinki{
     color:black;
     text-decoration: none;
 }
+.soleLinki:hover{
+    color:white;
+}
+.ostaliLinki{
+    color:black;
+    text-decoration: none;
+}
+.ostaliLinki:hover{
+    text-decoration: underline;
+}
 
 #sss:hover{
-    background-color: rgb(138, 138, 243);
+    background-color: #0057b8;
 }
 #sestg:hover{
-    background-color: rgb(16, 173, 16);
+    background-color: #009639;
 }
 #szks:hover{
-    background-color:fuchsia;
+    background-color: #ef4a81;
 }
 #sglvs:hover{
-    background-color:rgb(197, 140, 34);
+    background-color: #e5a200;
 }
 #eio:hover{
-    background-color:rgb(255, 238, 0);
+    background-color: #ffd30a;
 }
 #vss:hover{
-    background-color:rgb(70, 150, 224);
+    background-color: #009fdf;
 }
 #mic:hover{
-    background-color:rgb(131, 85, 216);
+    background-color: #8094dd;
     
 }
 #glavnaVsebina{
@@ -216,9 +235,12 @@ a.oranzen{
 }
 
 .logotipi img{
-    width:100%;
+    max-width:90%;
+    margin:auto;
+    display:flex;
 }
 
+/* -----------------------------------------------------------------------------------*/
 #vizija{
     width:100%;
     height:max-content;
