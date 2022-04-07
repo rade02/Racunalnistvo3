@@ -1,4 +1,4 @@
-public class Ulomek3 {
+public class Ulomek {
     public static void main(String[] args){
 
         Ulomek1 prvi = new Ulomek1(5, -4);
