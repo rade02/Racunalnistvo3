@@ -23,6 +23,7 @@
     height:1cm;
     position: relative;
     display: inline-block;
+    border-radius:2px;
     /*text-align: center;
     display: flex;
     justify-content:center;
@@ -46,11 +47,11 @@
 }
 #menu li{
     float:left;    /*seznam zacnemo z leve*/
-    position:relative;  /*da lahko elemente premikamo relativno od običjne postavitve*/
+    position:relative;  /*da lahko elemente premikamo relativno od obicajne postavitve*/
 }
 #menu a{
     float:left; /*da se a prilega li in ul*/
-    padding: 11px 20px;   /*gor-dol , levo-desno*/
+    padding: 9px 20px;   /*gor-dol , levo-desno*/
     /*text-transform:uppercase;*/
     text-decoration:none;
     color:white;
@@ -64,7 +65,7 @@
     visibility: hidden;
     position: absolute;
     transition: all 0.3s ease-in-out;
-    top: 1cm;   /*odmik zgoraj*/
+    top: 0.88cm;   /*odmik zgoraj*/
     left:0px;   /*odmik levo*/
     z-index: 1;
     border-radius:2px;
@@ -95,10 +96,15 @@
     height:100%;
     border: none;
     float:left;
+    /*position: relative;
+    display: inline-block;*/
+}
+.dropbtn:hover{
+    cursor:pointer;
 }
 .ddcontent{
     display: none;
-    position: absolute;
+    position: absolute; /*relative*/
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -110,8 +116,12 @@
     text-decoration: none;
     display: block;
 }
+.dropbtn:hover{
+    background-color:rgb(155, 44, 11);
+}
+.dropbtn:hover .ddcontent {display: block; visibility: visible; z-index:2}
 .ddcontent a:hover{background-color: #ddd;}
-.ddcontent:hover .ddcontent{display: block;}
+
 .ddcontent:hover .dropbtn{background-color: #3e8e41;}
 
 
