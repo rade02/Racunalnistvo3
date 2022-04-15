@@ -4,40 +4,88 @@
     border:1px solid;
     border-color: black;
 }*/
+h5{
+    color:maroon;
+    padding-left:5%;
+}
+
+/*-------------------------- od vrha --------------------------*/
 #stran{
     display: block;
     width:65%;
     margin:auto;
     font-family:Helvetica, Arial, sans-serif;
     font-size: small;
-    background-color: #f5f4f4;
-    min-width: 22.8cm;
-    max-width:30cm;
-}
-#zgornji{
     background-color: white;
-}
-
-
-#nav{
-    background-color:rgb(207, 79, 40);
-    height:1cm;
-    position: relative;
-    display: inline-block;
-    border-radius:2px;
-    width:100%;
-    /*text-align: center;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    width:100%;*/
+    /*min-width: 22.8cm;*/
+    max-width:30cm;
+    position:static;
 }
 .osnovni{
     width:100%;
     height:fit-content;
+    background-color: white;
     margin-top:5px;
     margin-bottom:1cm;
 }
+#stran > .osnovni div{  /*> le za prvega otroka in ne vse potomce*/
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+#eid{
+    position:absolute;
+    margin-top:120px;
+    margin-left: 250px;
+    width: 2.8cm;
+    height:1.1cm;
+    color:black;
+    background-color:white;
+    border: 3.5px solid rgb(155, 44, 11);
+    border-radius:10px;
+    text-align: center;
+    font-weight: bold;
+    font-size:25px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    transform: rotate(-13deg);
+    box-shadow: 5px 5px 8px #383838;
+}
+#stran .osnovni #search #eid #crniLink{
+    color:black;
+    text-decoration: none;
+}
+#stran .osnovni #oranznaPisava{
+    color:rgb(241, 156, 45);
+    width: max-content;
+    float:right;
+    font-size:large;
+    font-weight:bolder;
+}
+/*------------------- do navigacijske vrstice ----------------*/
+
+
+/*-------------------- navigacijska vrstica ------------------*/
+#stran .zunanjiDiv{
+    position:static;
+    background-color:rgb(207, 79, 40);
+    height:1cm;
+    width:200%;
+    left: 0;
+    right: 0;
+    top: 5cm;
+    display:flex;
+    justify-content:center;
+}
+#stran .zunanjiDiv #nav{
+    background-color:rgb(104, 40, 207);
+    height:100%;
+    position: relative;
+    width:max-content;
+    margin:auto;
+}
+
 #menu, #menu ul{
     padding:0;  /*da ni zamika na zacetku*/
     list-style:none;    /*da odstranimo oznake pri seznamu*/
@@ -90,6 +138,9 @@
     white-space:nowrap;
     float:none;
 }
+#menu li ul li a{
+    padding:10px;
+}
 /*.navDiv{
     height:100%;
     display:flex;
@@ -99,21 +150,21 @@
 .navDiv:hover{
     background-color:maroon;
 }*/
-.dropbtn{
+/*.dropbtn{
     background-color: rgb(207, 79, 40);
     color: white;
     height:100%;
     border: none;
     float:left;
     /*position: relative;
-    display: inline-block;*/
+    display: inline-block;
 }
 .dropbtn:hover{
     cursor:pointer;
 }
 .ddcontent{
     display: none;
-    position: absolute; /*relative*/
+    position: absolute; /*relative
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -134,90 +185,51 @@
 .ddcontent:hover .dropbtn{background-color: #3e8e41;}
 
 
-#search{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-.oranznaPisava{
-    color:rgb(241, 156, 45);
-    width: max-content;
-    float:right;
-    font-size:large;
-    font-weight:bolder;
-}
-#eid{
-    position:absolute;
-    margin-top:120px;
-    margin-left: 250px;
-    width: 2.8cm;
-    height:1.1cm;
-    color:black;
-    background-color:white;
-    border: 3.5px solid rgb(155, 44, 11);
-    border-radius:10px;
-    text-align: center;
-    font-weight: bold;
-    font-size:25px;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    transform: rotate(-13deg);
-    box-shadow: 5px 5px 8px #383838;
-}
-#crniLink{
-    color:black;
-    text-decoration: none;
-}
 
 .belaPisava{
     color:white;
 }
 .belaPisava:link{
     text-decoration:none;
-}
-
+}*/
+/*---------------------------- do slike  --------------------------*/
 
 #slikaSole{
     height:4cm;
     width:100%;
 }
 
-/* -----------------------------------------------------------------------------------*/
-#osnovnoOkno{   /*od slike do vizije*/
+/*----------------------------- od slike do konca levega stolpca ---------------------------*/
+#stran #osnovnoOkno{
     background-color: rgba(255, 255, 255, 0.315);
     display:flex;
 }
-#ozadjeOrgUpor{
-    background-color:rgba(197, 193, 193, 0.616);
-    padding-top:0.4cm;
-    padding-bottom:0.7cm;
-}
-#OrgUporab{
+#stran #osnovnoOkno #OrgUporab{
+    background-color:rgba(111, 111, 112, 0.37);
     padding:0.1cm;
     float:left;
     width:max-content;
     height:min-content;
+    padding-top:15px;
 }
-
-.orgEnoteUpor{
+#stran #osnovnoOkno #OrgUporab .orgEnoteUpor{
+    background-color: white;
     width:86%;
     margin:auto;
     margin-top:5px;
     margin-bottom:1cm;
-    background-color:white;
 }
-.oeu{
-    width:auto;
-    height:0.8cm;
+#stran #osnovnoOkno #OrgUporab .orgEnoteUpor .oeu{
     background-color:rgb(155, 44, 11);
     color:white;
+    height:0.8cm;
+    width:auto;
     font-weight: bolder;
     text-align:center;
     vertical-align: middle;
     padding-top:18px;
 }
-.sole{
+#stran #osnovnoOkno #OrgUporab .orgEnoteUpor .sole{
     display:flex;
     justify-content: flex;
     align-items: center;
@@ -227,21 +239,20 @@
     vertical-align: middle;
     padding:2px;
 }
-.soleLinki{
+#stran #osnovnoOkno #OrgUporab .orgEnoteUpor .soleLinki{
     color:black;
     text-decoration: none;
 }
-.soleLinki:hover{
+#stran #osnovnoOkno #OrgUporab .orgEnoteUpor .soleLinki:hover{
     color:white;
 }
-.ostaliLinki{
+#stran #osnovnoOkno #OrgUporab .orgEnoteUpor .ostaliLinki{
     color:black;
     text-decoration: none;
 }
-.ostaliLinki:hover{
+#stran #osnovnoOkno #OrgUporab .orgEnoteUpor .ostaliLinki:hover{
     text-decoration: underline;
 }
-
 #sss:hover{
     background-color: #0057b8;
 }
@@ -262,86 +273,83 @@
 }
 #mic:hover{
     background-color: #8094dd;
-    
 }
-#glavnaVsebina{
-    float:left;
-    /*background-color: darkgoldenrod;*/
+#stran #osnovnoOkno #OrgUporab .orgEnoteUpor .logotipi img{
+    max-width:90%;
+    margin:auto;
+    display:flex;
+}
+/*----------------------------- do konca levega stolpca ---------------------------*/
+
+
+/*----------------------------- desni del od levega stolpca ---------------------------*/
+#stran #osnovnoOkno #glavnaVsebina{
     width:100%;
 }
-#naslov{
+#stran #osnovnoOkno #glavnaVsebina #naslov{
     width:100%;
     text-align:center;
 }
-#vsebina{
+#stran #osnovnoOkno #glavnaVsebina #vsebina{
     display:flex;
 }
-.np{
+#stran #osnovnoOkno #glavnaVsebina #vsebina .np{
     float:left;
     width:50%;
-    /*background-color: greenyellow;*/
 }
-.nappom{
+#stran #osnovnoOkno #glavnaVsebina #vsebina .np .novice{
+    background-color:white;
+    width:85%;
+    margin:auto;
+    padding:5%;
+}
+#stran #osnovnoOkno #glavnaVsebina #vsebina .np .novice .nappom{
     width:90%;
     padding-left:5%;
-    /*background-color:rgb(148, 77, 155);*/
     padding:auto;
     font-size:larger;
     font-weight:bolder;
 }
-.novice{
-    width:85%;
-    margin:auto;
-    padding:5%;
-    background-color:rgb(255, 254, 254);
-}
-.vsebinaNovice{
-    /*background-color:rgb(214, 30, 30);*/
+#stran #osnovnoOkno #glavnaVsebina #vsebina .np .novice .vsebinaNovice{
     width:100%;
 }
-.vsebinaNovice::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-.slikaVNovici{
+#stran #osnovnoOkno #glavnaVsebina #vsebina .np .novice .slikaVNovici{
     float:right;
     text-align:justify;
     margin-left:10px;
 }
-a.oranzen{
+#stran #osnovnoOkno #glavnaVsebina #vsebina .np .novice .vsebinaNovice a.oranzen{
     color:orange;
 }
-.video{
+#stran #osnovnoOkno #glavnaVsebina #vsebina .np .novice .vsebinaNovice .video{
     margin-top:5%;
     text-align:center;
     vertical-align: middle;
     overflow:auto;
 }
-.mapouter{
+#stran #osnovnoOkno #glavnaVsebina #vsebina .np .novice .scaledFrame{
+    max-width: 100%;
+    max-height: 100%;
+}
+#stran #osnovnoOkno #glavnaVsebina #vsebina .np .novice .mapouter{
     margin-bottom:10%;
 }
-.gmap_canvas{
+#stran #osnovnoOkno #glavnaVsebina #vsebina .np .novice .mapouter .gmap_canvas{
     margin:auto;
     overflow:hidden;
     background:none;
-    height: 300px;
-    width:300px;
+    max-height: 250px;
+    max-width:250px;
 }
+/* ----------------------------- do vizije -----------------------------------------*/
 
-.logotipi img{
-    max-width:90%;
-    margin:auto;
-    display:flex;
-}
-
-/* -----------------------------------------------------------------------------------*/
-#vizija{
+/*------------------------------ vizija -------------------------------------------*/
+#stran .osnovni #vizija{
     width:100%;
     height:max-content;
     clear:both;
 }
-#siv{
+#stran #vizija #siv{
     width:100%;
     background-color:rgb(212, 212, 212);
     height:1cm;
@@ -351,70 +359,81 @@ a.oranzen{
     justify-content:center;
     align-items:center;
 }
-h5{
-    color:maroon;
-    padding-left:5%;
-}
-#besedilo{
+#stran #vizija #besedilo{
     padding-left:30%;
 }
 
-#spodnjaVrstica{
+#stran #spodnjaVrstica{
     background-color:rgb(155, 44, 11);
     height:1.5cm;
     width:100%;
-    display: flex;
+    display:flex;
     justify-content:space-around;
     align-items:center;
 }
-
-#znotraj{
+#stran #spodnjaVrstica #znotraj{
     color:white;
     display:flex;
     justify-content:space-between;
     align-items:center;
     width:90%;
 }
-#logo2inlinki{
-    display: flex;
+#stran #spodnjaVrstica #znotraj #logo2inlinki{
+    display:flex;
     gap:1px;
     align-items:center;
 }
 .RSS{
     color:white;
     text-decoration:none;
+    margin-left:4px;
 }
-#cpr{
-
-}
-
-#linki{
-    vertical-align: middle;
-}
-/*#cpr{
-    width:70%;
-    text-align: right;
-    vertical-align: middle;
-    padding-right:2%;
-    background-color: blueviolet;
+.RSS:hover{
+    text-decoration:underline;
 }
 
-cursor
-
-#spodnjaVrstica{
-    background-color:maroon;
-    height:1.5cm;
-    width:100%;
-    vertical-align: middle;
-    display: flex;
-    justify-content:space-around;
+@media screen and (min-width: 900px){
+    body{
+        background-color: aqua;
+    }
 }
-#znotraj{
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
-    vertical-align: middle;
-    width:90%;
-    background-color:rgb(0, 49, 49);
+@media screen and (max-width: 900px){
+    /*za navbar: flex-direction:column*/
+    body{
+        background-color: rgb(255, 0, 242);
+    }
+    #eid{
+        visibility: hidden;
+    }
+    #slikaSole{
+        height:auto;
+        width:100%;
+    }
+    #stran #osnovnoOkno{
+        display:unset;
+    }
+    #stran #osnovnoOkno #OrgUporab{
+        float:unset;
+        width:90%;
+        height:90%;
+        margin:auto;
+    }
+    #stran #osnovnoOkno #glavnaVsebina #vsebina{
+        display:unset;
+    }
+    #stran #osnovnoOkno #glavnaVsebina #vsebina .np{
+        float:unset;
+        width:100%;
+        margin:auto;
+    }
+    #stran #vizija #besedilo{
+        padding:0 5px 0 5px;
+    }
+    #stran #spodnjaVrstica #znotraj{
+        font-size:xx-small;
+    }
+    #stran #spodnjaVrstica #znotraj #logo2inlinki #logo2 img{
+        width:20px;
+        height:20px;
+    }
 }
