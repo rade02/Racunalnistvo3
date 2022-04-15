@@ -12,6 +12,7 @@
     font-size: small;
     background-color: #f5f4f4;
     min-width: 22.8cm;
+    max-width:30cm;
 }
 #zgornji{
     background-color: white;
@@ -24,6 +25,7 @@
     position: relative;
     display: inline-block;
     border-radius:2px;
+    width:100%;
     /*text-align: center;
     display: flex;
     justify-content:center;
@@ -41,17 +43,18 @@
     list-style:none;    /*da odstranimo oznake pri seznamu*/
 }
 #menu{  /*cez celoten .nav*/
-    width:100%;
+    width:fit-content;
     height:100%;
     border-radius:2px;
 }
 #menu li{
     float:left;    /*seznam zacnemo z leve*/
     position:relative;  /*da lahko elemente premikamo relativno od obicajne postavitve*/
+    top:-12.5px;
 }
 #menu a{
     float:left; /*da se a prilega li in ul*/
-    padding: 9px 20px;   /*gor-dol , levo-desno*/
+    padding: 11px 20px;   /*gor-dol , levo-desno*/
     /*text-transform:uppercase;*/
     text-decoration:none;
     color:white;
@@ -65,11 +68,17 @@
     visibility: hidden;
     position: absolute;
     transition: all 0.3s ease-in-out;
-    top: 0.88cm;   /*odmik zgoraj*/
+    top: 1cm;   /*odmik zgoraj*/
     left:0px;   /*odmik levo*/
     z-index: 1;
-    border-radius:2px;
+    border-radius:0px;
     background: rgb(207, 79, 40);
+}
+#menu li ul li{
+    top:0px;
+    display:block;
+    margin:auto;
+    padding:5%;
 }
 #menu li:hover > ul{
     opacity: 1;
@@ -180,7 +189,7 @@
     display:flex;
 }
 #ozadjeOrgUpor{
-    background-color:rgb(197, 193, 193);
+    background-color:rgba(197, 193, 193, 0.616);
     padding-top:0.4cm;
     padding-bottom:0.7cm;
 }
@@ -351,7 +360,7 @@ h5{
 }
 
 #spodnjaVrstica{
-    background-color:maroon;
+    background-color:rgb(155, 44, 11);
     height:1.5cm;
     width:100%;
     display: flex;
@@ -362,17 +371,21 @@ h5{
 #znotraj{
     color:white;
     display:flex;
-    
-
+    justify-content:space-between;
+    align-items:center;
     width:90%;
-    background-color:rgb(0, 49, 49);
 }
 #logo2inlinki{
     display: flex;
     gap:1px;
     align-items:center;
 }
+.RSS{
+    color:white;
+    text-decoration:none;
+}
 #cpr{
+
 }
 
 #linki{
