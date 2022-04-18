@@ -9,7 +9,11 @@ h5{
     padding-left:5%;
 }
 .hr{
-    width:90%; height:1px; border-width:0px; background-color:rgb(231, 231, 231); margin:0px auto 0px auto
+    width:90%;
+    height:1px;
+    border-width:0px;
+    background-color:rgb(231, 231, 231);
+    margin:0px auto 0px auto;
 }
 
 /*-------------------------- od vrha --------------------------*/
@@ -80,18 +84,11 @@ h5{
     display:flex;
     justify-content:center;
 }
-#stran .zunanjiDiv #nav{
-    background-color:rgb(104, 40, 207);
-    height:100%;
-    position: relative;
-    width:max-content;
-    margin:auto;
-}
 .navbar{
+    border: black 1px solid;
     overflow:hidden; /*skrije odvecen del spodaj*/
     background-color:rgb(207, 79, 40);
-    max-width: 64%;
-    width:64%;
+    width:1130px;
     min-width:fit-content;
     margin:auto;
 }
@@ -99,8 +96,9 @@ h5{
     float:left;
     color:white;
     font-weight:bolder;
+    font-size: 14px;
     text-align:center;
-    padding:10px 12px;
+    padding:10px 9px;
     text-decoration:none;
 }
 .dropdown{  /*polja, ki so dropdown*/
@@ -111,8 +109,9 @@ h5{
     border:none;
     outline:none;
     color:white;
-    padding:10px 10px;
+    padding:10px 9px;
     font-weight:bolder;
+    font-size: 14px;
     background-color: inherit;
     font-family:inherit;
     margin:0;
@@ -251,6 +250,13 @@ h5{
     margin:auto;
     padding:5%;
 }
+.medNovicami{
+    width:100%;
+    height:1px;
+    border-width:0px;
+    background-color:rgba(196, 196, 196, 0.452);
+    margin:10px auto 10px auto;
+}
 #stran #osnovnoOkno #glavnaVsebina #vsebina .np .novice .nappom{
     width:90%;
     padding-left:5%;
@@ -308,7 +314,7 @@ h5{
     align-items:center;
 }
 #stran #vizija #besedilo{
-    padding-left:30%;
+    padding: 0px 4px 0px 26%;
 }
 
 #stran #spodnjaVrstica{
@@ -341,16 +347,29 @@ h5{
 }
 
 
-
-@media screen and (min-width: 1100px){
-    body{
-        background-color: rgb(248, 242, 187);
+/*---------------------------------------------------------------------------------*/
+@media screen and (max-width: 500px){
+    #stran{
+        width:100%;
+        min-width:200px;
+        background-color: rgba(255, 205, 43, 0.342);
+    }
+    #eid{
+        visibility: hidden;
+    }
+    .navbar{
+        min-width:100px;
+    }
+    #oranznaPisava{
+        visibility:hidden;
+    }
+    #iskanje{
+        visibility:hidden;
     }
 }
 
 
-
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 670px){
     /*za navbar: flex-direction:column*/
     body{
         background-color: rgb(238, 212, 177);
@@ -407,139 +426,69 @@ h5{
     }
 }
 
+@media screen and (min-width: 670px){
+    body{
+        background-color: rgb(248, 165, 56);
+    }
+    #eid{
+        visibility: hidden;
+    }
+    .navbar{
+        width:64%;
+    }
+    .navbar a, .dropdown .dropbtn{
+        font-size:12px;
+        font-weight:bolder;
+        padding:10px 9px;
+        display:block;
+    }
+}
+/*---------------------------------------------------------------------------------*/
 
 
-
-
-
-
-
-
-
-
-/*
-#stran .zunanjiDiv{
-    position:absolute;
-    background-color:rgb(207, 79, 40);
-    height:1cm;
-    width:100%;
-    left: 0;
-    right: 0;
-    display:flex;
-    justify-content:center;
-}
-#stran .zunanjiDiv #nav{
-    background-color:rgb(104, 40, 207);
-    height:100%;
-    position: relative;
-    width:max-content;
-    margin:auto;
+@media screen and (min-width: 980px){
+    body{
+        background-color: rgb(248, 233, 101);
+    }
+    #eid{
+        margin-top:100px;
+        margin-left:200px;
+        visibility:visible;
+    }
+    .navbar{
+        width:64%;
+    }
+    .navbar a, .dropdown .dropbtn{
+        font-size:12px;
+        font-weight:lighter;
+        padding:10px 4px;
+    }
 }
 
-#menu, #menu ul{
-    padding:0;  da ni zamika na zacetku
-    list-style:none;    da odstranimo oznake pri seznamu
+@media screen and (min-width: 1260px){
+    body{
+        background-color: rgb(248, 165, 56);
+    }
+    #eid{
+        margin-top:120px;
+        margin-left:250px;
+        visibility:visible;
+    }
+    .navbar{
+        width:64%;
+    }
+    .navbar a, .dropdown .dropbtn{
+        font-size:14px;
+        font-weight:bolder;
+        padding:10px 9px;
+    }
 }
-#menu{  cez celoten .nav
-    width:fit-content;
-    height:100%;
-    border-radius:2px;
-}
-#menu li{
-    float:left;    seznam zacnemo z leve
-    position:relative;  da lahko elemente premikamo relativno od obicajne postavitve
-    top:-12.5px;
-}
-#menu a{
-    float:left; da se a prilega li in ul
-    padding: 11px 20px;   gor-dol , levo-desno
-    text-transform:uppercase;
-    text-decoration:none;
-    color:white;
-}
-#menu li:hover > a{
-    background:rgb(155, 44, 11);
-}
-#menu ul{
-    margin: 20px 0px 0px 20px;   kako se pokaze meni - premik od spodaj desno v zgoraj levo
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    transition: all 0.3s ease-in-out;
-    top: 1cm;   odmik zgoraj
-    left:0px;   odmik levo
-    z-index: 1;
-    border-radius:0px;
-    background: rgb(207, 79, 40);
-}
-#menu li ul li{
-    top:0px;
-    display:block;
-    margin:auto;
-    padding:5%;
-}
-#menu li:hover > ul{
-    opacity: 1;
-    visibility: visible;
-    margin:0px;    kje se prikaze meni - kako stran
-}
-#menu ul a{
-    display:table-row;
-    white-space:nowrap;
-    float:none;
-}
-#menu li ul li a{
-    padding:10px;
-}
-/*.navDiv{
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-}
-.navDiv:hover{
-    background-color:maroon;
-}*/
-/*.dropbtn{
-    background-color: rgb(207, 79, 40);
-    color: white;
-    height:100%;
-    border: none;
-    float:left;
-    /*position: relative;
-    display: inline-block;
-}
-.dropbtn:hover{
-    cursor:pointer;
-}
-.ddcontent{
-    display: none;
-    position: absolute; /*relative
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.ddcontent a{
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.dropbtn:hover{
-    background-color:rgb(155, 44, 11);
-}
-.dropbtn:hover .ddcontent {display: block; visibility: visible; z-index:2}
-.ddcontent a:hover{background-color: #ddd;}
 
-.ddcontent:hover .dropbtn{background-color: #3e8e41;}
-
-
-
-.belaPisava{
-    color:white;
+@media screen and (min-width: 1790px){
+    body{
+        background-color: rgb(230, 66, 107);
+    }
+    .navbar{
+        width:1130px;
+    }
 }
-.belaPisava:link{
-    text-decoration:none;
-}
-*/
