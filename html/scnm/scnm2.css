@@ -1,11 +1,15 @@
 /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/,
  http://www.barelyfitz.com/screencast/html-training/css/positioning/*/
+:root{
+    --main_color: #a63700;
+    --secondary_color: #531b00;
+}
 /*div{
     border:1px solid;
     border-color: black;
 }*/
 h5{
-    color:maroon;
+    color:var(--main_color);
     padding-left:5%;
 }
 .hr{
@@ -48,7 +52,7 @@ h5{
     height:1.1cm;
     color:black;
     background-color:white;
-    border: 3.5px solid rgb(155, 44, 11);
+    border: 3.5px solid var(--main_color);
     border-radius:10px;
     text-align: center;
     font-weight: bold;
@@ -76,7 +80,7 @@ h5{
 /*-------------------- navigacijska vrstica ------------------*/
 #stran .zunanjiDiv{
     position:absolute;
-    background-color:rgb(207, 79, 40);
+    background-color:var(--main_color);
     height:1cm;
     width:100%;
     left: 0;
@@ -85,9 +89,9 @@ h5{
     justify-content:center;
 }
 .navbar{
-    border: black 1px solid;
+    /*border: black 1px solid;*/
     overflow:hidden; /*skrije odvecen del spodaj*/
-    background-color:rgb(207, 79, 40);
+    background-color:var(--main_color);
     width:1130px;
     min-width:fit-content;
     margin:auto;
@@ -117,13 +121,13 @@ h5{
     margin:0;
 }
 .navbar a:hover, .dropdown:hover .dropbtn{
-    background-color: rgb(141, 12, 12);
+    background-color: var(--secondary_color);
     cursor:pointer;
 }
 .dropdown-content{  /*dropdown box*/
     display:none;
     position:absolute;
-    background-color:rgb(207, 79, 40);
+    background-color:var(--main_color);
     min-width:100px;
     box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index:1;
@@ -137,7 +141,7 @@ h5{
     text-align:left;
 }
 .dropdown-content a:hover{  /*sencenje elementov*/
-    background-color: rgb(141, 12, 12);
+    background-color: var(--secondary_color);
 }
 .dropdown:hover .dropdown-content{  /*da prikaze spodaj in ne v isti vrstici kot je navbar*/
     display:block;
@@ -157,7 +161,7 @@ h5{
     display:flex;
 }
 #stran #osnovnoOkno #OrgUporab{
-    background-color:rgba(111, 111, 112, 0.37);
+    background-color:#dadada;
     padding:0.1cm;
     float:left;
     width:max-content;
@@ -172,7 +176,7 @@ h5{
     margin-bottom:1cm;
 }
 #stran #osnovnoOkno #OrgUporab .orgEnoteUpor .oeu{
-    background-color:rgb(155, 44, 11);
+    background-color:var(--main_color);
     color:white;
     height:0.8cm;
     font-weight: bolder;
@@ -318,7 +322,7 @@ h5{
 }
 
 #stran #spodnjaVrstica{
-    background-color:rgb(155, 44, 11);
+    background-color:var(--main_color);
     height:1.5cm;
     width:100%;
     display:flex;
@@ -330,7 +334,8 @@ h5{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    width:90%;
+    width:60%;
+    margin:auto;
 }
 #stran #spodnjaVrstica #znotraj #logo2inlinki{
     display:flex;
@@ -347,8 +352,12 @@ h5{
 }
 
 
-/*---------------------------------------------------------------------------------*/
-@media screen and (max-width: 500px){
+
+@media screen and (max-width: 815px){
+    /*za navbar: flex-direction:column*/
+    body{
+        background-color: rgb(238, 212, 177);
+    }
     #stran{
         width:100%;
         min-width:200px;
@@ -366,19 +375,7 @@ h5{
     #iskanje{
         visibility:hidden;
     }
-}
 
-
-@media screen and (max-width: 670px){
-    /*za navbar: flex-direction:column*/
-    body{
-        background-color: rgb(238, 212, 177);
-    }
-    #eid{
-        visibility: hidden;
-    }
-
-    /*-----------------*/
     .navbar a, .dropdown .dropbtn .dropdown-content a{
         float:none;
         display:block;
@@ -388,7 +385,6 @@ h5{
         height:auto;
         width:100%;
     }
-    /*-----------------*/
 
     #stran #osnovnoOkno{
         display:unset;
@@ -426,10 +422,25 @@ h5{
     }
 }
 
-@media screen and (min-width: 670px){
-    body{
-        background-color: rgb(248, 165, 56);
+@media screen and (max-width: 895px){
+    /*body{
+        background-color: rgb(56, 248, 248);
+    }*/
+    #stran{
+        width:100%;
     }
+    #stran #spodnjaVrstica #znotraj{
+        width:90%;
+    }
+    #eid{
+        visibility: hidden;
+    }
+}
+
+@media screen and (min-width: 895px){
+    /*body{
+        background-color: rgb(248, 165, 56);
+    }*/
     #eid{
         visibility: hidden;
     }
@@ -439,17 +450,15 @@ h5{
     .navbar a, .dropdown .dropbtn{
         font-size:12px;
         font-weight:bolder;
-        padding:10px 9px;
+        padding:10px 1px;
         display:block;
     }
 }
-/*---------------------------------------------------------------------------------*/
-
 
 @media screen and (min-width: 980px){
-    body{
+    /*body{
         background-color: rgb(248, 233, 101);
-    }
+    }*/
     #eid{
         margin-top:100px;
         margin-left:200px;
@@ -460,15 +469,14 @@ h5{
     }
     .navbar a, .dropdown .dropbtn{
         font-size:12px;
-        font-weight:lighter;
-        padding:10px 4px;
+        padding:10px 6px;
     }
 }
 
 @media screen and (min-width: 1260px){
-    body{
+    /*body{
         background-color: rgb(248, 165, 56);
-    }
+    }*/
     #eid{
         margin-top:120px;
         margin-left:250px;
@@ -485,10 +493,13 @@ h5{
 }
 
 @media screen and (min-width: 1790px){
-    body{
+    /*body{
         background-color: rgb(230, 66, 107);
-    }
+    }*/
     .navbar{
         width:1130px;
+    }
+    #stran #spodnjaVrstica #znotraj{
+        width:1080px;
     }
 }
