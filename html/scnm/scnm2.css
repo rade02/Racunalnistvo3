@@ -1,6 +1,6 @@
 /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/,
  http://www.barelyfitz.com/screencast/html-training/css/positioning/*/
-:root{
+ :root{
     --main_color: #a63700;
     --secondary_color: #531b00;
 }
@@ -90,7 +90,7 @@ h5{
 }
 .navbar{
     /*border: black 1px solid;*/
-    overflow:hidden; /*skrije odvecen del spodaj*/
+    overflow:hidden;
     background-color:var(--main_color);
     width:1130px;
     min-width:fit-content;
@@ -376,9 +376,18 @@ h5{
         visibility:hidden;
     }
 
-    .navbar a, .dropdown .dropbtn .dropdown-content a{
+    .navbar a, .dropdown, .dropbtn, .dropdown-content a{
         float:none;
-        display:block;
+        display:flex;
+        flex-direction:column;
+    }
+    .dropbtn, .dropdown{
+        align-items: center;
+        width:100%;
+    }
+    .dropdown-content{
+        position:relative;
+        top:0px;
     }
     #slikaSole{
         position:inherit;
@@ -388,6 +397,8 @@ h5{
 
     #stran #osnovnoOkno{
         display:unset;
+        position:relative;
+        top:200px;
     }
     #stran #osnovnoOkno #OrgUporab{
         float:unset;
@@ -410,8 +421,16 @@ h5{
         width:100%;
         margin:auto;
     }
+    #stran #vizija{
+        position:relative;
+        top:200px;
+    }
     #stran #vizija #besedilo{
         padding:0 5px 0 5px;
+    }
+    #stran #spodnjaVrstica{
+        position:relative;
+        top:200px;
     }
     #stran #spodnjaVrstica #znotraj{
         font-size:xx-small;
