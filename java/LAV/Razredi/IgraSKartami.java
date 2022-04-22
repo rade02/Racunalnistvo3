@@ -1,4 +1,6 @@
 public class IgraSKartami {
+	/* V kupu imamo 52 kart, ki jih premesamo in jih dodelimo igralcema. Nato od vsakega vzamemo po eno karto in jih primerjamo, ter ugotovimo, kateri igralec je zmagal (vojna).
+	*/
 
 	public static void main(String[] args) {
 		/*
