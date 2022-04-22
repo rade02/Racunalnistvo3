@@ -66,7 +66,7 @@ public class IgraSKartami2 {
 class Igralec extends Kup{
     public int tocke;
 
-    Igralec(int velikost){
+    public Igralec(int velikost){
         super(velikost);
         tocke = 0;
     }
@@ -91,7 +91,7 @@ class Kup{
     public int velikost;
     public int stevecNapolnjenosti;
 
-    Kup(int velikost){
+    public Kup(int velikost){
         this.velikost = velikost;
         this.kup = new Karta[velikost];
         stevecNapolnjenosti = 0;
@@ -128,7 +128,7 @@ class Karta{
     public int stevilo;
     public String barva;
 
-    Karta(int stevilo, String barva){
+    public Karta(int stevilo, String barva){
         this.stevilo = stevilo;
         this.barva = barva;
     }
