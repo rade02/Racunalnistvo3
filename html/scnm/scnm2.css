@@ -1,3 +1,4 @@
+
 /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/,
  http://www.barelyfitz.com/screencast/html-training/css/positioning/*/
  :root{
@@ -39,6 +40,11 @@ h5{
     margin-top:5px;
     margin-bottom:1cm;
 }
+#trikotniki{
+    background-image: url(header_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
 #stran > .osnovni div{  /*> le za prvega otroka in ne vse potomce*/
     display:flex;
     justify-content:space-between;
@@ -67,12 +73,22 @@ h5{
     color:black;
     text-decoration: none;
 }
+.li2{
+    display:inline;
+}
+.li2 a{
+    text-decoration: none;
+}
+.li2:hover{
+    text-decoration: underline;
+}
 #stran .osnovni #oranznaPisava{
     color:rgb(241, 156, 45);
     width: max-content;
     float:right;
-    font-size:large;
+    font-size:24px;
     font-weight:bolder;
+    background-color:transparent;
 }
 /*------------------- do navigacijske vrstice ----------------*/
 
@@ -469,7 +485,7 @@ h5{
     .navbar a, .dropdown .dropbtn{
         font-size:12px;
         font-weight:bolder;
-        padding:10px 1px;
+        padding:10px 3px;
         display:block;
     }
 }
