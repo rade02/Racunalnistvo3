@@ -1,7 +1,7 @@
 
 /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/,
  http://www.barelyfitz.com/screencast/html-training/css/positioning/*/
- :root{
+:root{
     --main_color: #a63700;
     --secondary_color: #531b00;
 }
@@ -121,11 +121,11 @@ h5{
     padding:10px 9px;
     text-decoration:none;
 }
-.dropdown{  /*polja, ki so dropdown*/
+.navbar > div{  /*polja, ki so dropdown*/
     float:left;
     overflow:hidden;
 }
-.dropdown .dropbtn{ /*polje za prikaz dropdown*/
+.navbar > div .dropbtn{ /*polje za prikaz dropdown*/
     border:none;
     outline:none;
     color:white;
@@ -136,7 +136,7 @@ h5{
     font-family:inherit;
     margin:0;
 }
-.navbar a:hover, .dropdown:hover .dropbtn{
+.navbar a:hover, .navbar > div:hover .dropbtn{
     background-color: var(--secondary_color);
     cursor:pointer;
 }
@@ -159,7 +159,7 @@ h5{
 .dropdown-content a:hover{  /*sencenje elementov*/
     background-color: var(--secondary_color);
 }
-.dropdown:hover .dropdown-content{  /*da prikaze spodaj in ne v isti vrstici kot je navbar*/
+.navbar > div:hover .dropdown-content{  /*da prikaze spodaj in ne v isti vrstici kot je navbar*/
     display:block;
 }
 /*---------------------------- do slike  --------------------------*/
@@ -368,6 +368,7 @@ h5{
 }
 
 
+/*------------------------------ media -------------------------------------------*/
 
 @media screen and (max-width: 815px){
     /*za navbar: flex-direction:column*/
@@ -377,13 +378,20 @@ h5{
     #stran{
         width:100%;
         min-width:200px;
-        background-color: rgba(255, 205, 43, 0.342);
+        /*background-color: rgba(255, 205, 43, 0.342);*/
+    }
+    #search a{
+        position:relative;
+        left:20%;
     }
     #eid{
         visibility: hidden;
     }
     .navbar{
         min-width:100px;
+        float:none;
+        display:flex;
+        flex-direction:column;
     }
     #oranznaPisava{
         visibility:hidden;
@@ -392,23 +400,29 @@ h5{
         visibility:hidden;
     }
 
-    .navbar a, .dropdown, .dropbtn, .dropdown-content a{
-        float:none;
-        display:flex;
-        flex-direction:column;
-    }
-    .dropbtn, .dropdown{
-        align-items: center;
+    .navbar a, .navbar > div{
         width:100%;
+    }
+    .dropbtn{
+        /*background-color: #009639;*/
+        width:50%;
+
+    }
+    .navbar > div{
+        text-align: center;
+        /*background-color: #009639;
+        width:50%;
+        position:relative;
+        left:100px;*/
     }
     .dropdown-content{
         position:relative;
         top:0px;
+        left:170px;
+        width:50%;
     }
     #slikaSole{
-        position:inherit;
-        height:auto;
-        width:100%;
+        visibility: hidden;
     }
 
     #stran #osnovnoOkno{
@@ -482,7 +496,7 @@ h5{
     .navbar{
         width:64%;
     }
-    .navbar a, .dropdown .dropbtn{
+    .navbar a, .navbar > div .dropbtn{
         font-size:12px;
         font-weight:bolder;
         padding:10px 3px;
@@ -502,7 +516,7 @@ h5{
     .navbar{
         width:64%;
     }
-    .navbar a, .dropdown .dropbtn{
+    .navbar a, .navbar > div .dropbtn{
         font-size:12px;
         padding:10px 6px;
     }
@@ -520,7 +534,7 @@ h5{
     .navbar{
         width:64%;
     }
-    .navbar a, .dropdown .dropbtn{
+    .navbar a, .navbar > div .dropbtn{
         font-size:14px;
         font-weight:bolder;
         padding:10px 9px;
@@ -537,4 +551,8 @@ h5{
     #stran #spodnjaVrstica #znotraj{
         width:1080px;
     }
+}
+
+#vizija > ul{
+    list-style-type:square;
 }
