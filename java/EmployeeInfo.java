@@ -10,8 +10,11 @@ public class EmployeeInfo {
         eb.addEmployee(one);
         eb.addEmployee(two);
         eb.addEmployee(three);
-        eb.print();
+        //eb.print();
         eb.removeEmployee(two);
+
+        EmployeeOther four = new EmployeeOther("James", "Microsoft", 44);
+        eb.addEmployee(four);
         eb.print();
     }
 }
@@ -67,9 +70,27 @@ class Employee{
         this.salary = s;
         this.address = a;
     }
+    public Employee(String n){
+        this.name = n;
+    }
 
     public void print(){
         System.out.println(id + " " + name + ", " + year + ", " + salary + ", " + address.street + ", " + address.number + ", " + address.postcode + ", " + address.city);
     }
     
+}
+
+class EmployeeOther extends Employee{
+    public String company;
+    public int dayCount;
+
+    public EmployeeOther(String n, String c, int dc){
+        super(n);
+        this.company = c;
+        this.dayCount = dc;
+    }
+
+    public void print(){
+        System.out.println(name + ", " + company + ", " + dayCount);
+    }
 }
