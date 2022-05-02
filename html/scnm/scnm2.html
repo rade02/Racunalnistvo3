@@ -5,6 +5,13 @@
         <link rel="stylesheet" href="scnm2.css">
         <link rel="icon" href="scnmlogo.png">
         <meta charset="UTF-8">
+        <script type="text/javascript">
+            function redirect(){
+                let input = document.getElementById("iskalnoPolje").value
+                let url = ("https://www.sc-nm.si/iskalnik/?search=").concat(input)
+                window.open(url)
+            }
+        </script>
     </head>
     <body>
         <div id="stran">
@@ -14,8 +21,8 @@
                     <a href="https://www.sc-nm.si/"><img src="https://www.sc-nm.si/template/images/logo.png" style="margin:10px"></a>
                     <p id="eid"><a id="crniLink" href="https://id.sc-nm.si/">eID</a></p>
                     <div id="iskanje" style="margin:10px">
-                        <input type="text" placeholder="Išči">
-                        <input type="button" value="Išči">
+                        <input id="iskalnoPolje" type="text" placeholder="Išči" size="15">
+                        <button onClick="redirect()" type="button" style="background-color: #a63700;"><img src="https://cdn-icons-png.flaticon.com/512/49/49116.png" width="10px" height="10px"></button>
                         <ul>
                             <li class="li2"><a href="https://www.sc-nm.si/" style="color: #531b00;">SLO</a></li>
                             <li class="li2"> | </li>
@@ -246,7 +253,7 @@
             <!------------------------------ vizija ------------------------------------------->
             <div class="osnovni" id="vizija">
                 <div id="siv">Vizija Šolskega centra Novo mesto</div>
-                <h5 style="text-indent: 50px;">Soustvarjamo šolo učenja za življenje...</h5>
+                <h5 style="text-indent: 10px;">Soustvarjamo šolo učenja za življenje...</h5>
                 <p id="besedilo">Z zavestjo, da je poleg znanja pomembno mladim ponuditi tudi okolje, 
                     v katerem se bodo dobro počutili in v katerem bodo suvereno in samostojno
                     gradili svoje osebnosti, znali prepoznati svoje želje in si zadati cilje, 
