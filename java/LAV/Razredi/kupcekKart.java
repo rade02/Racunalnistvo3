@@ -11,7 +11,7 @@ class kupcekKart{
             }
         }
     }
-    public kupcekKart(){
+    public kupcekKart(int x){
         this();     //klic drugega konstruktorja - mora biti na zacetku
         System.out.println("klic drugega konstruktorja");
     }
