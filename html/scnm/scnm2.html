@@ -10,6 +10,7 @@
                 let input = document.getElementById("iskalnoPolje").value
                 let url = ("https://www.sc-nm.si/iskalnik/?search=").concat(input)
                 window.open(url)
+                document.getElementById("iskalnoPolje").value = ''
             }
         </script>
     </head>
@@ -41,11 +42,11 @@
                             DOMOV &#9660;
                         </button>
                         <div class="dropdown-content">
-                            <a href="https://www.sc-nm.si/domov/vizitka">Vizitka</a>
-                            <a href="https://www.sc-nm.si/domov/kje-smo">Kje smo</a>
-                            <a href="https://www.sc-nm.si/zemljevid-strani">Zemljevid strani</a>
-                            <a href="https://www.sc-nm.si/kontakt">Mnenja</a>
-                            <a href="https://www.sc-nm.si/domov/pravni-pouk">Pravni pouk</a>
+                            <div><a href="https://www.sc-nm.si/domov/vizitka">Vizitka</a></div>
+                            <div><a href="https://www.sc-nm.si/domov/kje-smo">Kje smo</a></div>
+                            <div><a href="https://www.sc-nm.si/zemljevid-strani">Zemljevid strani</a></div>
+                            <div><a href="https://www.sc-nm.si/kontakt">Mnenja</a></div>
+                            <div><a href="https://www.sc-nm.si/domov/pravni-pouk">Pravni pouk</a></div>
                         </div>
                     </div>
                     <div>
@@ -53,20 +54,20 @@
                             INFORMACIJE &#9660;
                         </button>
                         <div class="dropdown-content">
-                            <a href="https://www.sc-nm.si/informacije/nagovor-direktorja-1">Nagovor direktorja</a>
-                            <a href="https://www.sc-nm.si/informacije/osebna-izkaznica">Osebna izkaznica</a>
-                            <a href="https://www.sc-nm.si/informacije/organiziranost-sc-novo-mesto">Organiziranost Šolskega centra Novo mesto</a>
-                            <a href="https://www.sc-nm.si/informacije/koledar_sc">Koledar</a>
-                            <a href="https://www.sc-nm.si/informacije/solske-ure">Šolske ure</a>
-                            <a href="https://www.sc-nm.si/informacije/hisni-red">Hišni red</a>
-                            <a href="https://www.sc-nm.si/informacije/elektronska-posta">Elektronska pošta</a>
-                            <a href="https://www.sc-nm.si/informacije/office-365">Office 365</a>
-                            <a href="https://www.sc-nm.si/informacije/publikacija-solskega-centra-novo-mesto">Publikacija Šolskega centra Novo mesto</a>
-                            <a href="https://www.sc-nm.si/informacije/predstavitev-solskega-centra-novo-mesto1">Predstavitev Šolskega centra Novo mesto</a>
-                            <a href="https://www.sc-nm.si/informacije/Katalog%20informacij%20javnega%20zna%C4%8Daja%20%C5%A0olskega%20centra%20Novo%20mesto">Katalog informacij javnega značaja Šolskega centra Novo mesto</a>
-                            <a href="https://www.sc-nm.si/informacije/izjava-o-dostopnosti">Izjava o dostopnosti</a>
-                            <a href="https://www.sc-nm.si/informacije/obdelava-osebnih-podatkov">Obdelava osebnih podatkov</a>
-                            <a href="https://www.sc-nm.si/povezave">Povezave</a>
+                            <div><a href="https://www.sc-nm.si/informacije/nagovor-direktorja-1">Nagovor direktorja</a></div>
+                            <div><a href="https://www.sc-nm.si/informacije/osebna-izkaznica">Osebna izkaznica</a></div>
+                            <div><a href="https://www.sc-nm.si/informacije/organiziranost-sc-novo-mesto">Organiziranost Šolskega centra Novo mesto</a></div>
+                            <div><a href="https://www.sc-nm.si/informacije/koledar_sc">Koledar</a></div>
+                            <div><a href="https://www.sc-nm.si/informacije/solske-ure">Šolske ure</a></div>
+                            <div><a href="https://www.sc-nm.si/informacije/hisni-red">Hišni red</a></div>
+                            <div><a href="https://www.sc-nm.si/informacije/elektronska-posta">Elektronska pošta</a></div>
+                            <div><a href="https://www.sc-nm.si/informacije/office-365">Office 365</a></div>
+                            <div><a href="https://www.sc-nm.si/informacije/publikacija-solskega-centra-novo-mesto">Publikacija Šolskega centra Novo mesto</a></div>
+                            <div><a href="https://www.sc-nm.si/informacije/predstavitev-solskega-centra-novo-mesto1">Predstavitev Šolskega centra Novo mesto</a></div>
+                            <div><a href="https://www.sc-nm.si/informacije/Katalog%20informacij%20javnega%20zna%C4%8Daja%20%C5%A0olskega%20centra%20Novo%20mesto">Katalog informacij javnega značaja Šolskega centra Novo mesto</a></div>
+                            <div><a href="https://www.sc-nm.si/informacije/izjava-o-dostopnosti">Izjava o dostopnosti</a></div>
+                            <div><a href="https://www.sc-nm.si/informacije/obdelava-osebnih-podatkov">Obdelava osebnih podatkov</a></div>
+                            <div><a href="https://www.sc-nm.si/povezave">Povezave</a></div>
                         </div>
                     </div>
                     <div><a href="https://www.sc-nm.si/projekti">PROJEKTI</a></div>
@@ -75,10 +76,10 @@
                             IZOBRAŽEVANJE &#9660;
                         </button>
                         <div class="dropdown-content">
-                            <a href="https://www.sc-nm.si/izobrazevanje/dejavnost-sc-novo-mesto">Dejavnost ŠC Novo mesto</a>
-                            <a href="https://www.sc-nm.si/izobrazevanje/organizacijske-enote">Organizacijske enote</a>
-                            <a href="https://www.sc-nm.si/izobrazevanje/Izobra%C5%BEevalni%20programi%20%C5%A0olskega%20centra%20Novo%20mesto">Izobraževalni programi</a>
-                            <a href="https://www.sc-nm.si/izobrazevanje/izobrazevanje-brezposelnih-oseb">Izobraževanje brezposelnih oseb</a>
+                            <div><a href="https://www.sc-nm.si/izobrazevanje/dejavnost-sc-novo-mesto">Dejavnost ŠC Novo mesto</a></div>
+                            <div><a href="https://www.sc-nm.si/izobrazevanje/organizacijske-enote">Organizacijske enote</a></div>
+                            <div><a href="https://www.sc-nm.si/izobrazevanje/Izobra%C5%BEevalni%20programi%20%C5%A0olskega%20centra%20Novo%20mesto">Izobraževalni programi</a></div>
+                            <div><a href="https://www.sc-nm.si/izobrazevanje/izobrazevanje-brezposelnih-oseb">Izobraževanje brezposelnih oseb</a></div>
                         </div>
                     </div>
                     <div><a href="https://www.sc-nm.si/razpisi">RAZPISI</a></div>
