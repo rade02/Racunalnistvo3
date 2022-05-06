@@ -1,7 +1,7 @@
 
 /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/,
  http://www.barelyfitz.com/screencast/html-training/css/positioning/*/
-:root{
+ :root{
     --main_color: #a63700;
     --secondary_color: #531b00;
 }
@@ -148,15 +148,20 @@ h5{
     box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index:1;
 }
-.dropdown-content a{    /*linki v dropdownu*/
+.dropdown-content div{
+    width:304px;
+}
+.dropdown-content div a{    /*linki v dropdownu*/
     float:none;
     color:white;
-    padding:12px 16px;
+    padding:12px 0px;
+    padding-left:10px;
+    padding-right:0px;
     text-decoration:none;
     display:block;
     text-align:left;
 }
-.dropdown-content a:hover{  /*sencenje elementov*/
+.dropdown-content div a:hover{  /*sencenje elementov*/
     background-color: var(--secondary_color);
 }
 .navbar > div:hover .dropdown-content{  /*da prikaze spodaj in ne v isti vrstici kot je navbar*/
@@ -269,6 +274,14 @@ h5{
     width:85%;
     margin:auto;
     padding:5%;
+}
+.logotipi{
+    opacity:0.8;
+}
+.logotipi:hover{
+    opacity:1;
+    transition:0.5;
+    transform: scale(1.2);
 }
 .medNovicami{
     width:100%;
@@ -406,7 +419,6 @@ h5{
     .dropbtn{
         /*background-color: #009639;*/
         width:50%;
-
     }
     .navbar > div{
         text-align: center;
@@ -418,8 +430,11 @@ h5{
     .dropdown-content{
         position:relative;
         top:0px;
-        left:170px;
-        width:50%;
+        left:157px;
+        width:314px;
+    }
+    .dropdown-content > a:hover{
+        width:314px;
     }
     #slikaSole{
         visibility: hidden;
